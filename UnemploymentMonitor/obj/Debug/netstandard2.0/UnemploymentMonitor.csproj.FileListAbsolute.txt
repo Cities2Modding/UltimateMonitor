@@ -1,6 +1,0 @@
-C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.0\UnemploymentMonitor.csproj.AssemblyReference.cache
-C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.0\MyPluginInfo.cs
-C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.0\UnemploymentMonitor.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.0\UnemploymentMonitor.AssemblyInfoInputs.cache
-C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.0\UnemploymentMonitor.AssemblyInfo.cs
-C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.0\UnemploymentMonitor.csproj.CoreCompileInputs.cache
