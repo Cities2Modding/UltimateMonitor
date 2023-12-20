@@ -547,15 +547,6 @@
             "related": ".xml"
           }
         }
-      },
-      "UnityEngine.Modules/5.6.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/UnityEngine.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        }
       }
     }
   },
@@ -2400,48 +2391,29 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
-    },
-    "UnityEngine.Modules/5.6.0": {
-      "sha512": "75gMEfWUx3r8OWT//33acnWSaipdLUo5l/B7o1sGPSThp/eWioOcGXE3dhz+Ye8ZrzMrJbEbCpjxowIu5J6JDw==",
-      "type": "package",
-      "path": "unityengine.modules/5.6.0",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net35/UnityEngine.dll",
-        "lib/net45/UnityEngine.dll",
-        "lib/netstandard2.0/UnityEngine.dll",
-        "unityengine.modules.5.6.0.nupkg.sha512",
-        "unityengine.modules.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "BepInEx.Analyzers >= 1.*",
       "BepInEx.Core >= 5.*",
-      "BepInEx.PluginInfoProps >= 2.*",
-      "UnityEngine.Modules >= 5.6.0"
+      "BepInEx.PluginInfoProps >= 2.*"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rober\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\danpe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
+      "projectUniqueName": "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
       "projectName": "UnemploymentMonitor",
-      "projectPath": "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
-      "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\obj\\",
+      "projectPath": "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
+      "packagesPath": "C:\\Users\\danpe\\.nuget\\packages\\",
+      "outputPath": "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\danpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2482,11 +2454,6 @@
           "BepInEx.PluginInfoProps": {
             "target": "Package",
             "version": "[2.*, )"
-          },
-          "UnityEngine.Modules": {
-            "include": "Compile",
-            "target": "Package",
-            "version": "[5.6.0, )"
           }
         },
         "imports": [
@@ -2505,7 +2472,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

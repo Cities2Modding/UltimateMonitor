@@ -23,3 +23,15 @@ C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\bin\Debug\ne
 C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\bin\Debug\netstandard2.1\Unity.Burst.dll
 C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\bin\Debug\netstandard2.1\Unity.Burst.Unsafe.dll
 C:\Users\rober\source\repos\UnemploymentMonitor\UnemploymentMonitor\bin\Debug\netstandard2.1\Unity.Mathematics.dll
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.csproj.AssemblyReference.cache
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\MyPluginInfo.cs
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.GeneratedMSBuildEditorConfig.editorconfig
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.AssemblyInfoInputs.cache
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.AssemblyInfo.cs
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.csproj.CoreCompileInputs.cache
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.sourcelink.json
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.dll
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\obj\Debug\netstandard2.1\UnemploymentMonitor.pdb
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\bin\Debug\netstandard2.1\UnemploymentMonitor.deps.json
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\bin\Debug\netstandard2.1\UnemploymentMonitor.dll
+E:\Source\Repos\UnemploymentMonitor\UnemploymentMonitor\bin\Debug\netstandard2.1\UnemploymentMonitor.pdb

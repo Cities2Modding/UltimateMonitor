@@ -1,39 +1,46 @@
-# Cities Skylines 2 : Unemployment Monitor Mod
-Unemployment Monitor is a plugin for HookUI that displays various, detailed employment statistics about your cities.  Currently the mod displays unemployment rates by education level, the number of homeless households, and the number of underemployed Cims.  Underemployed Cims are citizens who accepted jobs below their education level.
+# Cities Skylines 2: Unemployment Monitor Mod
+**Maintainer**: Cities2Modding  
+**Original Author**: DerangedTeddy
 
-> [!IMPORTANT]
-> Cities Skylines 2 modding is in a volatile state right now since Colossal Order has not yet released official modding tools.  Download and install mods at your own risk, and only download mods from their official sources (GitHub, Thunderstore).  Many websites steal mods from official sources, manipulate them to add malware, and upload them to unofficial websites.  This mod and all others that I develop will ONLY be available here on GitHub or Thunderstore and should be considered the only official sources.
+## Overview
+The Unemployment Monitor is an insightful plugin for HookUI designed to provide comprehensive employment statistics in Cities Skylines 2. Maintained by Cities2Modding, it offers detailed metrics including unemployment rates categorized by education level, counts of homeless households, and the prevalence of underemployment among Cims.
 
-> [!CAUTION]
-> This update will make small changes to your game's save files.  I have tested the mod to ensure that this will not corrupt your files, and you should be able to uninstall the mod at any time and continue playing.  However, you should DEFINITELY back up your save files before installing this mod just in case.
+## Important Notices
+- **Mod Stability**: As Colossal Order has yet to release official modding tools for Cities Skylines 2, the modding environment is subject to change. We advise caution when installing mods and recommend using only official sources — GitHub and Thunderstore.
+- **Save File Safety**: This mod has been rigorously tested for stability. However, as it makes minor alterations to game save files, we strongly recommend backing up your saves before installation.
 
-## Requirements and Compatibility
-- Cities Skylines II version 1.0.14f1 (November 16th 2023 update)
+## Requirements
+- Cities Skylines II (Version 1.0.14f1, November 16th, 2023 update)
 - BepInEx 5
-- HookUI 0.3.2 or newer
+- HookUI (Version 0.3.2 or newer)
 
-## Installation
-1. Make sure that BepInEx 5 is installed.
-2. Make sure that HookUI 0.3.2 or newer is installed.
-3. Place the `UnemploymentMonitor.dll` file in your BepInEx `Plugins` folder.
+## Installation Guide
+1. Confirm the installation of BepInEx 5 and HookUI (0.3.2 or newer).
+2. Place the `UnemploymentMonitor.dll` file in the BepInEx `Plugins` folder.
 
-## Known Issues
-- None at this time
+## Current Mod Status
+- No known issues as of the latest update.
 
-## Changelog
-- v1.0.0
-  - Initial release
-- v1.1.0
-  - Added homeless families counter
-  - Added underemployment system and counter
+## Update Log
+- **v1.0.0**: Initial release by DerangedTeddy.
+- **v1.1.0**: Introduction of homeless families count and underemployment tracking system.
+- **v1.2.0**: 
+   - New Feature: Persistent window position with configurations saved in a config file.
+   - UI Redesign: Revamped user interface to be less intrusive and take up less screen space. Key statistics are now displayed as vertical bars. Hovering over these bars reveals the label of the statistic, while a short code is displayed above when not hovering. The window is also transparent, minimizing screen obstruction.
 
 ## Planned Features
-- More detailed statistics about available workplaces, underemployment, etc.
-- Underemployment by education
-  
-## Disclaimers and Notes
-> [!CAUTION]
-> You are downloading, installing, and running this mod on your computer at your own risk.  I do not accept any responsibility for damage caused to your game, your computer, or your Cim's lives.
+- Detailed workplace availability statistics.
+- Education-specific underemployment analysis.
 
->[!CAUTION]
-> This update will make small changes to your game's save files.  I have tested the mod to ensure that this will not corrupt your files, and you should be able to uninstall the mod at any time and continue playing.  However, you should DEFINITELY back up your save files before installing this mod just in case.
+## GitHub Repository
+For the latest version of the Cim Behavior Improvements Mod, please visit our official GitHub repository:
+
+🔗 [Unemployment Monitor Mod on GitHub](https://github.com/Cities2Modding/UnemploymentMonitor)
+
+## Acknowledgements
+### Special Thanks to DerangedTeddy
+Cities2Modding extends heartfelt thanks to DerangedTeddy for their foundational work on this mod. Their original contributions have been integral to enhancing the Cities Skylines 2 community.
+
+## Disclaimers
+- **Liability**: Use of this mod is at your own risk. Neither Cities2Modding nor DerangedTeddy assumes responsibility for any potential damage to your game, computer, or in-game entities.
+- **Data Integrity**: Installation of this mod may slightly modify game save files. While tested for safety, backing up your game data is recommended as a precautionary measure.

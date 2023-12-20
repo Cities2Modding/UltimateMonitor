@@ -1,0 +1,23 @@
+{
+  "name": "unemployment-monitor.frontend",
+  "version": "0.0.0",
+  "description": "UnemploymentMonitor.Frontend",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "end-of-stream": "^1.4.4",
+    "esbuild": "^0.19.8",
+    "eslint": "^8.21.0",
+    "fs-extra": "^11.2.0",
+    "gulp": "^4.0.2",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "hookui-framework": "github:captain-of-coit/hookui-framework"
+  },
+  "eslintConfig": {}
+}

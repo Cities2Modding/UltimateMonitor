@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Unemployment monitor")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96b58417776cdfb2fcd02c31121aac15500f7354")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnemploymentMonitor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnemploymentMonitor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

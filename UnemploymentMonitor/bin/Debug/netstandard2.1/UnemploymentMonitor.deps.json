@@ -11,21 +11,7 @@
         "dependencies": {
           "BepInEx.Analyzers": "1.0.8",
           "BepInEx.Core": "5.4.21",
-          "BepInEx.PluginInfoProps": "2.1.0",
-          "UnityEngine.Modules": "5.6.0",
-          "Colossal.Collections": "0.0.0.0",
-          "Colossal.Core": "0.0.0.0",
-          "Colossal.Mathematics": "0.0.0.0",
-          "Colossal.UI.Binding": "0.0.0.0",
-          "Colossal.UI": "0.0.0.0",
-          "Game": "0.0.0.0",
-          "HookUILib": "0.3.0.0",
-          "Unity.Burst": "0.0.0.0",
-          "Unity.Burst.Unsafe": "4.0.5.0",
-          "Unity.Collections": "0.0.0.0",
-          "Unity.Entities": "0.0.0.0",
-          "Unity.Mathematics": "1.0.0.0",
-          "UnityEngine.CoreModule": "0.0.0.0"
+          "BepInEx.PluginInfoProps": "2.1.0"
         },
         "runtime": {
           "UnemploymentMonitor.dll": {}
@@ -363,111 +349,6 @@
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
-      },
-      "UnityEngine.Modules/5.6.0": {},
-      "Colossal.Collections/0.0.0.0": {
-        "runtime": {
-          "Colossal.Collections.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Colossal.Core/0.0.0.0": {
-        "runtime": {
-          "Colossal.Core.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Colossal.Mathematics/0.0.0.0": {
-        "runtime": {
-          "Colossal.Mathematics.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Colossal.UI.Binding/0.0.0.0": {
-        "runtime": {
-          "Colossal.UI.Binding.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Colossal.UI/0.0.0.0": {
-        "runtime": {
-          "Colossal.UI.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Game/0.0.0.0": {
-        "runtime": {
-          "Game.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "HookUILib/0.3.0.0": {
-        "runtime": {
-          "HookUILib.dll": {
-            "assemblyVersion": "0.3.0.0",
-            "fileVersion": "0.3.0.0"
-          }
-        }
-      },
-      "Unity.Burst/0.0.0.0": {
-        "runtime": {
-          "Unity.Burst.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Burst.Unsafe/4.0.5.0": {
-        "runtime": {
-          "Unity.Burst.Unsafe.dll": {
-            "assemblyVersion": "4.0.5.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Collections/0.0.0.0": {
-        "runtime": {
-          "Unity.Collections.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Entities/0.0.0.0": {
-        "runtime": {
-          "Unity.Entities.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Mathematics/1.0.0.0": {
-        "runtime": {
-          "Unity.Mathematics.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "UnityEngine.CoreModule/0.0.0.0": {
-        "runtime": {
-          "UnityEngine.CoreModule.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
       }
     }
   },
@@ -735,78 +616,6 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
-    },
-    "UnityEngine.Modules/5.6.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-75gMEfWUx3r8OWT//33acnWSaipdLUo5l/B7o1sGPSThp/eWioOcGXE3dhz+Ye8ZrzMrJbEbCpjxowIu5J6JDw==",
-      "path": "unityengine.modules/5.6.0",
-      "hashPath": "unityengine.modules.5.6.0.nupkg.sha512"
-    },
-    "Colossal.Collections/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Colossal.Core/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Colossal.Mathematics/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Colossal.UI.Binding/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Colossal.UI/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Game/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "HookUILib/0.3.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Burst/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Burst.Unsafe/4.0.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Collections/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Entities/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Mathematics/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "UnityEngine.CoreModule/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
