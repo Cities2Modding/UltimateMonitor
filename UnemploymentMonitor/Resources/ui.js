@@ -2033,7 +2033,7 @@
       };
     }, [dragging]);
     const mouseOverHeaderStyle = !mouseOver ? { opacity: 0 } : { opacity: 1 };
-    return /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel_YqS", style: { ...draggableStyle, width: "auto" }, onMouseEnter, onMouseLeave }, /* @__PURE__ */ import_react6.default.createElement(
+    return /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel_YqS", style: { ...draggableStyle, width: "auto", maxWidth: "225rem" }, onMouseEnter, onMouseLeave }, /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         className: "header_H_U header_Bpo child-opacity-transition_nkS",
@@ -2041,7 +2041,7 @@
         onMouseDown
       },
       /* @__PURE__ */ import_react6.default.createElement("div", { className: "title-bar_PF4" }, /* @__PURE__ */ import_react6.default.createElement("div", { className: "title_SVH title_zQN" }, title))
-    ), /* @__PURE__ */ import_react6.default.createElement("div", { className: "", style: { background: "none" } }, children));
+    ), /* @__PURE__ */ import_react6.default.createElement("div", { className: "", style: { background: "none", display: "flex", flexDirection: "column", alignItems: "center" } }, children));
   };
   var engineEffect = (react, event, setFunc) => {
     const updateEvent = event + ".update";

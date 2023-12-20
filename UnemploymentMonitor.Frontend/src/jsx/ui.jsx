@@ -113,14 +113,14 @@ const $Panel = ({ title, children, react }) => {
     const mouseOverHeaderStyle = !mouseOver ? { opacity: 0 } : { opacity: 1 };
 
     return (
-        <div className="panel_YqS" style={{ ...draggableStyle, width: 'auto' }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <div className="panel_YqS" style={{ ...draggableStyle, width: 'auto', maxWidth: '225rem' }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <div className="header_H_U header_Bpo child-opacity-transition_nkS" style={{ ...mouseOverHeaderStyle, transition: 'opacity 0.5s easeOut', borderRadius: '20rem'  }}
                 onMouseDown={onMouseDown}>
                 <div className="title-bar_PF4">
                     <div className="title_SVH title_zQN">{title}</div>
                 </div>
             </div>
-            <div className="" style={{ background: 'none' }}>
+            <div className="" style={{ background: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 {children}
             </div>
         </div>

@@ -23,7 +23,10 @@ gulp.task('build-jsx', function (done) {
         //const localLowDestPath = path.join(localLowPath, 'Colossal Order', 'Cities Skylines II', 'Mods', 'HookUI', 'Extensions', 'cities2modding.unemploymentmonitor.js');
 
         //fs.copySync('../UnemploymentMonitor/Resources/ui.js', localLowDestPath, { overwrite: true });
-
+        fs.copySync(
+            '../UnemploymentMonitor/Resources/ui.js',
+            'G:/SteamLibrary/steamapps/common/Cities Skylines II/Cities2_Data/StreamingAssets/~UI~/HookUI/Extensions/panel.cities2modding.unemploymentmonitor.js'
+        );
         done();
     }).catch((error) => {
         console.error(error);
