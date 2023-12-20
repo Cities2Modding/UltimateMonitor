@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj": {}
+    "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj": {
+    "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
+        "projectUniqueName": "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
         "projectName": "UnemploymentMonitor",
-        "projectPath": "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
-        "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rober\\source\\repos\\UnemploymentMonitor\\UnemploymentMonitor\\obj\\",
+        "projectPath": "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\UnemploymentMonitor.csproj",
+        "packagesPath": "C:\\Users\\danpe\\.nuget\\packages\\",
+        "outputPath": "E:\\Source\\Repos\\UnemploymentMonitor\\UnemploymentMonitor\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\danpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,11 +55,6 @@
             "BepInEx.PluginInfoProps": {
               "target": "Package",
               "version": "[2.*, )"
-            },
-            "UnityEngine.Modules": {
-              "include": "Compile",
-              "target": "Package",
-              "version": "[5.6.0, )"
             }
           },
           "imports": [
@@ -82,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
