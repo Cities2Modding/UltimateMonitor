@@ -27,6 +27,7 @@ The Unemployment Monitor is an insightful plugin for HookUI designed to provide 
 - **v1.2.0**: 
    - New Feature: Persistent window position with configurations saved in a config file.
    - UI Redesign: Revamped user interface to be less intrusive and take up less screen space. Key statistics are now displayed as vertical bars. Hovering over these bars reveals the label of the statistic, while a short code is displayed above when not hovering. The window is also transparent, minimizing screen obstruction.
+- **v1.4.0**: Fixed incorrect renaming of 'Under Employment'. Added shortening of values if they get big. Added 15 second data tracking which shows the increase or decrease over a period of time. Introduced SHIFT+E toggle to show/hide the monitor.
 
 ## Planned Features
 - Detailed workplace availability statistics.

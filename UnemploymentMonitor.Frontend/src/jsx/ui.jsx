@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDataUpdate } from 'hookui-framework';
 
-const $Label = ({ label, value, style }) => {
+const $Stat = ({ label, value, diff, style, icon, iconStyle }) => {
     const textStyle = {
         color: '#FFFFFF', // Text color
         fontWeight: 'bold', // Optional: if you want bold text
@@ -10,12 +10,13 @@ const $Label = ({ label, value, style }) => {
         display: 'flex',
         flexDirection: 'row',
         width: '100%',
-        alignItems: 'center'
+        alignItems: 'center',
+        height: "45rem"
     };
 
     const columnStyle = {
         flex: 1,
-        width: '70%',
+        width: '40%',
         textTransform: 'uppercase'
     };
     const column2Style = {
@@ -24,14 +25,24 @@ const $Label = ({ label, value, style }) => {
         textAlign: 'right',
         fontSize: '20rem'
     };
-    return <div style={{...style, ...textStyle}}>
+    const column3Style = {
+        width: "30rem",
+        fontSize: "13rem",
+        textAlign: "right",
+        fontWeight: "bold",
+        color: diff == 0 ? "inherit" : diff > 0 ? "var(--negativeColor)" : "var(--positiveColor)"
+    };
+    return <div style={{ flex: 1, ...style, ...textStyle }}>
         <div style={columnStyle}>
             {label}
         </div>
         <div style={column2Style}>
             {value}
         </div>
-    </div>
+        <div style={column3Style}>
+            {diff === 0 ? null :diff}
+        </div>
+    </div>;
 }
 
 const panelStyle = {
@@ -113,7 +124,7 @@ const $Panel = ({ title, children, react }) => {
     const mouseOverHeaderStyle = !mouseOver ? { opacity: 0 } : { opacity: 1 };
 
     return (
-        <div className="panel_YqS" style={{ ...draggableStyle, width: 'auto', maxWidth: '225rem' }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <div className="panel_YqS" style={{ ...draggableStyle, width: 'auto', maxWidth: '300rem' }} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <div className="header_H_U header_Bpo child-opacity-transition_nkS" style={{ ...mouseOverHeaderStyle, transition: 'opacity 0.5s easeOut', borderRadius: '20rem'  }}
                 onMouseDown={onMouseDown}>
                 <div className="title-bar_PF4">
@@ -329,28 +340,35 @@ const maxGood = 'linear-gradient(to right,rgba(255, 78, 24, 1.000000) 0.000000%,
 const minGood = 'linear-gradient(to right,rgba(71, 148, 54, 1.000000) 0.000000%, rgba(99, 181, 6, 1.000000) 5.000000%, rgba(255, 131, 27, 1.000000) 7.500000%, rgba(255, 78, 24, 1.000000) 10.000000%)'
 
 const meterEventsToListenTo = [
-    ['Total', 'unemploymentInfo.unemploymentTotal', minGood],
-    ['Uneducated', 'unemploymentInfo.unemploymentEducation0', minGood],
-    ['Poorly Educated', 'unemploymentInfo.unemploymentEducation1', minGood],
-    ['Educated', 'unemploymentInfo.unemploymentEducation2', minGood],
-    ['Well Educated', 'unemploymentInfo.unemploymentEducation3', minGood],
-    ['Highly Educated', 'unemploymentInfo.unemploymentEducation4', minGood],
+    ["Total", "unemploymentInfo.unemploymentTotal", minGood],
+    ["Uneducated", "unemploymentInfo.unemploymentEducation0", minGood],
+    ["Poorly Educated", "unemploymentInfo.unemploymentEducation1", minGood],
+    ["Educated", "unemploymentInfo.unemploymentEducation2", minGood],
+    ["Well Educated", "unemploymentInfo.unemploymentEducation3", minGood],
+    ["Highly Educated", "unemploymentInfo.unemploymentEducation4", minGood],
 ]
 
 const labelEventsToListenTo = [
-    ['Unemployed', 'unemploymentInfo.underemployedCimsCount'],
-    ['Homeless Households', 'unemploymentInfo.homelessHouseholdCount']
+    ["Unemployed", "unemploymentInfo.unemployed"],
+    ["Under Employed", "unemploymentInfo.underEmployed"],
+    ["Homeless Households", "unemploymentInfo.homelessHouseholds"]
 ]
 
 const $CityMonitor = ({ react }) => {
     const [hoveredItem, setHoveredItem] = react.useState('');
 
     const labels = labelEventsToListenTo.map(([label, eventName], index) => {
-        const [read, set] = react.useState(-1)
-        engineEffect(react, eventName, set)
+        const [read, set] = react.useState(-1);
+        const [vector, setVector] = react.useState(0);
+        const [diff, setDiff] = react.useState(0);
+        engineEffect(react, eventName, set);
+        engineEffect(react, `${eventName}Vector`, setVector);
+        engineEffect(react, `${eventName}Diff`, setDiff);
+        
+        const icon = eventName === "unemploymentInfo.employable" ? "" : vector == 1 ? "Media/Glyphs/ThickStrokeArrowUp.svg" : vector == -1 ? "Media/Glyphs/ThickStrokeArrowDown.svg" : "";
+        const iconStyle = eventName === "unemploymentInfo.employable" ? 0 : vector == 1 ? { backgroundColor: "var(--negativeColor)" } : vector == -1 ? { backgroundColor: "var(--positiveColor)" } : {};
 
-        const style = index > 0 ? { marginTop: '5rem' } : null;
-        return <$Label key={eventName} label={label} value={read} style={style} />
+        return <$Stat key={eventName} label={label} icon={icon} diff={diff} iconStyle={iconStyle} value={read} />;
     })
 
     const meters = meterEventsToListenTo.map(([label, eventName, gradient]) => {
@@ -378,7 +396,7 @@ const $CityMonitor = ({ react }) => {
 
     return <div>
         <$Panel title="Unemployment" react={react}>
-            <div style={{ padding: '7.5rem' }}>
+            <div style={{ padding: '7.5rem', marginBottom: "10rem" }}>
                 {labels}
             </div>
             <div style={{ display: 'flex', flexDirection: 'row', marginTop: '5rem', position: 'relative' }} onMouseLeave={onMouseLeave}>

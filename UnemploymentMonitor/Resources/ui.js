@@ -1947,7 +1947,7 @@
   var use_data_update_default = useDataUpdate;
 
   // src/jsx/ui.jsx
-  var $Label = ({ label, value, style }) => {
+  var $Stat = ({ label, value, diff, style, icon, iconStyle }) => {
     const textStyle = {
       color: "#FFFFFF",
       // Text color
@@ -1958,11 +1958,12 @@
       display: "flex",
       flexDirection: "row",
       width: "100%",
-      alignItems: "center"
+      alignItems: "center",
+      height: "45rem"
     };
     const columnStyle = {
       flex: 1,
-      width: "70%",
+      width: "40%",
       textTransform: "uppercase"
     };
     const column2Style = {
@@ -1971,7 +1972,14 @@
       textAlign: "right",
       fontSize: "20rem"
     };
-    return /* @__PURE__ */ import_react6.default.createElement("div", { style: { ...style, ...textStyle } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: columnStyle }, label), /* @__PURE__ */ import_react6.default.createElement("div", { style: column2Style }, value));
+    const column3Style = {
+      width: "30rem",
+      fontSize: "13rem",
+      textAlign: "right",
+      fontWeight: "bold",
+      color: diff == 0 ? "inherit" : diff > 0 ? "var(--negativeColor)" : "var(--positiveColor)"
+    };
+    return /* @__PURE__ */ import_react6.default.createElement("div", { style: { flex: 1, ...style, ...textStyle } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: columnStyle }, label), /* @__PURE__ */ import_react6.default.createElement("div", { style: column2Style }, value), /* @__PURE__ */ import_react6.default.createElement("div", { style: column3Style }, diff === 0 ? null : diff));
   };
   var panelStyle = {
     position: "absolute",
@@ -2033,7 +2041,7 @@
       };
     }, [dragging]);
     const mouseOverHeaderStyle = !mouseOver ? { opacity: 0 } : { opacity: 1 };
-    return /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel_YqS", style: { ...draggableStyle, width: "auto", maxWidth: "225rem" }, onMouseEnter, onMouseLeave }, /* @__PURE__ */ import_react6.default.createElement(
+    return /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel_YqS", style: { ...draggableStyle, width: "auto", maxWidth: "300rem" }, onMouseEnter, onMouseLeave }, /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         className: "header_H_U header_Bpo child-opacity-transition_nkS",
@@ -2203,16 +2211,22 @@
     ["Highly Educated", "unemploymentInfo.unemploymentEducation4", minGood]
   ];
   var labelEventsToListenTo = [
-    ["Unemployed", "unemploymentInfo.underemployedCimsCount"],
-    ["Homeless Households", "unemploymentInfo.homelessHouseholdCount"]
+    ["Unemployed", "unemploymentInfo.unemployed"],
+    ["Under Employed", "unemploymentInfo.underEmployed"],
+    ["Homeless Households", "unemploymentInfo.homelessHouseholds"]
   ];
   var $CityMonitor = ({ react }) => {
     const [hoveredItem, setHoveredItem] = react.useState("");
     const labels = labelEventsToListenTo.map(([label, eventName], index) => {
       const [read, set] = react.useState(-1);
+      const [vector, setVector] = react.useState(0);
+      const [diff, setDiff] = react.useState(0);
       engineEffect(react, eventName, set);
-      const style = index > 0 ? { marginTop: "5rem" } : null;
-      return /* @__PURE__ */ import_react6.default.createElement($Label, { key: eventName, label, value: read, style });
+      engineEffect(react, `${eventName}Vector`, setVector);
+      engineEffect(react, `${eventName}Diff`, setDiff);
+      const icon = eventName === "unemploymentInfo.employable" ? "" : vector == 1 ? "Media/Glyphs/ThickStrokeArrowUp.svg" : vector == -1 ? "Media/Glyphs/ThickStrokeArrowDown.svg" : "";
+      const iconStyle = eventName === "unemploymentInfo.employable" ? 0 : vector == 1 ? { backgroundColor: "var(--negativeColor)" } : vector == -1 ? { backgroundColor: "var(--positiveColor)" } : {};
+      return /* @__PURE__ */ import_react6.default.createElement($Stat, { key: eventName, label, icon, diff, iconStyle, value: read });
     });
     const meters = meterEventsToListenTo.map(([label, eventName, gradient]) => {
       const [read, set] = react.useState(-1);
@@ -2235,7 +2249,7 @@
     const onMouseLeave = () => {
       setHoveredItem("");
     };
-    return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement($Panel, { title: "Unemployment", react }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { padding: "7.5rem" } }, labels), /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexDirection: "row", marginTop: "5rem", position: "relative" }, onMouseLeave }, ...meters, hoveredItem !== "" ? /* @__PURE__ */ import_react6.default.createElement("div", { style: { ...textStyle, position: "absolute", left: 0, top: "-2.5rem", width: "100%", whiteSpace: "nowrap", textTransform: "uppercase", textAlign: "center" } }, hoveredItem) : null)));
+    return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement($Panel, { title: "Unemployment", react }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { padding: "7.5rem", marginBottom: "10rem" } }, labels), /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexDirection: "row", marginTop: "5rem", position: "relative" }, onMouseLeave }, ...meters, hoveredItem !== "" ? /* @__PURE__ */ import_react6.default.createElement("div", { style: { ...textStyle, position: "absolute", left: 0, top: "-2.5rem", width: "100%", whiteSpace: "nowrap", textTransform: "uppercase", textAlign: "center" } }, hoveredItem) : null)));
   };
   window._$hookui.registerPanel({
     id: "cities2modding.unemploymentmonitor",
