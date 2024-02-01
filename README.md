@@ -30,11 +30,6 @@ You will find two menus ingame (CityMonitor and UnemploymentMonitor).
 - Detailed workplace availability statistics.
 - Education-specific underemployment analysis.
 
-## GitHub Repository
-For the latest version of the Cim Behavior Improvements Mod, please visit our official GitHub repository:
-
-🔗 [Unemployment Monitor Mod on GitHub](https://github.com/Cities2Modding/UnemploymentMonitor)
-
 ## Acknowledgements
 ### Special Thanks to DerangedTeddy and Captain_of_Coit
 Cities2Modding extends heartfelt thanks to DerangedTeddy and Captain_of_Coit for their foundational work on this mod. Their original contributions have been integral to enhancing the Cities Skylines 2 community.
