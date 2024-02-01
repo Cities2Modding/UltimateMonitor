@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnemploymentMonitor", "UnemploymentMonitor\UnemploymentMonitor.csproj", "{8C12F7F9-DA29-4EC3-94E6-1453E5D74102}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltimateMonitor", "UltimateMonitor\UltimateMonitor.csproj", "{8C12F7F9-DA29-4EC3-94E6-1453E5D74102}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "UnemploymentMonitor.Frontend", "UnemploymentMonitor.Frontend\UnemploymentMonitor.Frontend.njsproj", "{C05768BA-1098-4D81-BF45-7A695B2D2429}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "UltimateMonitor.Frontend", "UltimateMonitor.Frontend\UltimateMonitor.Frontend.njsproj", "{C05768BA-1098-4D81-BF45-7A695B2D2429}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

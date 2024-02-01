@@ -2,7 +2,7 @@
 using HarmonyLib;
 using HookUILib.Core;
 
-namespace UnemploymentMonitor
+namespace UltimateMonitor
 {
     [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin
@@ -18,7 +18,7 @@ namespace UnemploymentMonitor
 
     public class UnemploymentUIExtension : UIExtension
     {
-        public new readonly string extensionID = "cities2modding.unemploymentmonitor";
+        public new readonly string extensionID = "cities2modding.ultimatemonitor";
 
         public new readonly string extensionContent;
 
@@ -26,7 +26,7 @@ namespace UnemploymentMonitor
 
         public UnemploymentUIExtension( )
         {
-            extensionContent = LoadEmbeddedResource( "UnemploymentMonitor.Resources.ui.js" );
+            extensionContent = LoadEmbeddedResource( "UltimateMonitor.Resources.ui.js" );
         }
     }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "unemployment-monitor.frontend",
+  "name": "ultimate-monitor.frontend",
   "version": "0.0.0",
-  "description": "UnemploymentMonitor.Frontend",
+  "description": "UltimateMonitor.Frontend",
   "main": "app.js",
   "author": {
     "name": ""

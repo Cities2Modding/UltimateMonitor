@@ -8,7 +8,7 @@ const path = require('path');
 gulp.task('build-jsx', function (done) {
     esbuild.build({
         entryPoints: ['src/jsx/ui.jsx'],
-        outdir: '../UnemploymentMonitor/Resources',
+        outdir: '../UltimateMonitor/Resources',
         bundle: true,
         platform: 'browser',
         loader: {
@@ -24,8 +24,8 @@ gulp.task('build-jsx', function (done) {
 
         //fs.copySync('../UnemploymentMonitor/Resources/ui.js', localLowDestPath, { overwrite: true });
         fs.copySync(
-            '../UnemploymentMonitor/Resources/ui.js',
-            'G:/SteamLibrary/steamapps/common/Cities Skylines II/Cities2_Data/StreamingAssets/~UI~/HookUI/Extensions/panel.cities2modding.unemploymentmonitor.js'
+            '../UltimateMonitor/Resources/ui.js',
+            'G:/SteamLibrary/steamapps/common/Cities Skylines II/Cities2_Data/StreamingAssets/~UI~/HookUI/Extensions/panel.cities2modding.ultimatemonitor.js'
         );
         done();
     }).catch((error) => {

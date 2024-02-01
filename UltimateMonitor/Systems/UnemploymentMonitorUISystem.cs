@@ -13,7 +13,7 @@ using Game.UI;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using UnemploymentMonitor.Configuration;
+using UltimateMonitor.Configuration;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -21,7 +21,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Scripting;
 
-namespace UnemploymentMonitor.Systems
+namespace UltimateMonitor.Systems
 {
     public class UnemploymentMonitorUISystem : UISystemBase
     {
@@ -66,6 +66,7 @@ namespace UnemploymentMonitor.Systems
             AddUpdateBinding( new GetterValueBinding<int>( "unemploymentInfo", "unemploymentEducation4", ( ) => m_CountEmploymentSystem.GetUnemploymentByEducation( out JobHandle deps )[4] ) );
 
             AddUpdateBinding( new GetterValueBinding<Vector2>( "unemploymentInfo", "windowPos", ( ) => ( Vector2 ) new Vector2( ( float ) _config.X, ( float ) _config.Y ) ) );
+            AddUpdateBinding( new GetterValueBinding<Vector2>( "citymonitor", "windowPos", ( ) => ( Vector2 ) new Vector2( ( float ) _config.CityX, ( float ) _config.CityY ) ) );
 
 
             AddBinding( new TriggerBinding<double, double>( "unemploymentInfo", "updateWindow", ( x, y ) =>
@@ -74,6 +75,11 @@ namespace UnemploymentMonitor.Systems
                 _config.Y = ( decimal ) y;
             } ) );
 
+            AddBinding( new TriggerBinding<double, double>( "citymonitor", "updateWindow", ( x, y ) =>
+            {
+                _config.CityX = ( decimal ) x;
+                _config.CityY = ( decimal ) y;
+            } ) );
 
             AddBinding( new TriggerBinding( "unemploymentInfo", "saveConfig", ( ) =>
             {

@@ -10,9 +10,9 @@ using UnityEngine.Scripting;
 using BepInEx.Logging;
 using System.Runtime.CompilerServices;
 using Game.Simulation;
-using UnemploymentMonitor.ComponentTypes;
+using UltimateMonitor.ComponentTypes;
 
-namespace UnemploymentMonitor.Systems
+namespace UltimateMonitor.Systems
 {
     public class UnemploymentMonitorSystem : GameSystemBase
     {

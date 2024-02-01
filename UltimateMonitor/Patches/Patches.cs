@@ -1,9 +1,9 @@
 ﻿using Game;
 using Game.Common;
 using HarmonyLib;
-using UnemploymentMonitor.Systems;
+using UltimateMonitor.Systems;
 
-namespace UnemploymentMonitor.Patches;
+namespace UltimateMonitor.Patches;
 
 [HarmonyPatch]
 class Patches

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Unity.Entities;
 
-namespace UnemploymentMonitor.ComponentTypes
+namespace UltimateMonitor.ComponentTypes
 {
     public struct UnderemployedWorker : IComponentData, IQueryTypeParameter, ISerializable
     {

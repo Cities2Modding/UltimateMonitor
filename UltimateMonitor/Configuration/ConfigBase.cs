@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace UnemploymentMonitor.Configuration
+namespace UltimateMonitor.Configuration
 {
     /// <summary>
     /// Abstract base class for configuration handling.

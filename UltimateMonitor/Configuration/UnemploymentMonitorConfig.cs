@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UnemploymentMonitor.Configuration
+namespace UltimateMonitor.Configuration
 {
     /// <summary>
     /// Core unemployment config class
@@ -14,6 +14,18 @@ namespace UnemploymentMonitor.Configuration
         } = -1;
 
         public decimal Y
+        {
+            get;
+            set;
+        } = -1;
+
+        public decimal CityX
+        {
+            get;
+            set;
+        } = -1;
+
+        public decimal CityY
         {
             get;
             set;
