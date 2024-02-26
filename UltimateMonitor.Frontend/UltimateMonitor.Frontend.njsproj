@@ -32,6 +32,11 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\jsx\ui.jsx" />
+    <Content Include="src\jsx\_add-window.jsx" />
+    <Content Include="src\jsx\_monitor-item.jsx" />
+    <Content Include="src\jsx\_monitor-window-content.jsx" />
+    <Content Include="src\jsx\_monitor-window.jsx" />
+    <Content Include="src\jsx\_raw-stat.jsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />

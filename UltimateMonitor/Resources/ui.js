@@ -1913,570 +1913,705 @@
   // src/jsx/ui.jsx
   var import_react6 = __toESM(require_react());
 
-  // node_modules/hookui-framework/src/components/panel.jsx
-  var import_react = __toESM(require_react());
-
-  // node_modules/hookui-framework/src/components/field.jsx
-  var import_react3 = __toESM(require_react());
-
-  // node_modules/hookui-framework/src/components/label.jsx
-  var import_react2 = __toESM(require_react());
-
-  // node_modules/hookui-framework/src/components/meter.jsx
+  // src/jsx/_monitor-window.jsx
   var import_react4 = __toESM(require_react());
 
-  // node_modules/hookui-framework/src/components/button.jsx
-  var import_react5 = __toESM(require_react());
-
-  // node_modules/hookui-framework/src/helpers/use-data-update.js
-  var useDataUpdate = (react, event, onUpdate, deps) => {
-    return react.useEffect(() => {
-      const updateEvent = event + ".update";
-      const subscribeEvent = event + ".subscribe";
-      const unsubscribeEvent = event + ".unsubscribe";
-      var sub = engine.on(updateEvent, (data) => {
-        onUpdate && onUpdate(data);
-      });
-      engine.trigger(subscribeEvent);
-      return () => {
-        engine.trigger(unsubscribeEvent);
-        sub.clear();
-      };
-    }, deps || []);
-  };
-  var use_data_update_default = useDataUpdate;
-
-  // src/jsx/ui.jsx
-  var $Stat = ({ label, value, diff, style, icon, iconStyle }) => {
-    const textStyle = {
-      color: "#FFFFFF",
-      // Text color
-      fontWeight: "bold",
-      // Optional: if you want bold text
-      fontSize: "14rem",
-      textShadow: "1rem 1rem 5rem rgba(0,0,0,1)",
-      display: "flex",
-      flexDirection: "row",
-      width: "100%",
-      alignItems: "center",
-      height: "45rem"
-    };
-    const columnStyle = {
-      flex: 1,
-      width: "40%",
-      textTransform: "uppercase"
-    };
-    const column2Style = {
-      flex: 1,
-      width: "30%",
-      textAlign: "right",
-      fontSize: "20rem"
-    };
-    const column3Style = {
-      width: "30rem",
-      fontSize: "13rem",
-      textAlign: "right",
-      fontWeight: "bold",
-      color: diff == 0 ? "inherit" : diff > 0 ? "var(--negativeColor)" : "var(--positiveColor)"
-    };
-    return /* @__PURE__ */ import_react6.default.createElement("div", { style: { flex: 1, ...style, ...textStyle } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: columnStyle }, label), /* @__PURE__ */ import_react6.default.createElement("div", { style: column2Style }, value), /* @__PURE__ */ import_react6.default.createElement("div", { style: column3Style }, diff === 0 ? null : diff));
-  };
-  var panelStyle = {
-    position: "absolute",
-    width: "300rem"
-  };
-  var $Panel = ({ title, children, react, plugin, style }) => {
-    const [position, setPosition] = react.useState({ top: 100, left: 10 });
-    const [dragging, setDragging] = react.useState(false);
-    const [mouseOver, setMouseOver] = react.useState(false);
-    const [rel, setRel] = react.useState({ x: 0, y: 0 });
-    use_data_update_default(react, plugin + ".windowPos", (pos) => {
-      setPosition({ top: pos.y, left: pos.x });
+  // node_modules/reactjs-id/src/React-Id.js
+  function ReactId() {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == "x" ? r : r & 3 | 8;
+      return v.toString(16);
     });
-    const onMouseDown = (e) => {
-      if (e.button !== 0)
-        return;
-      const panelElement = e.target.closest(".panel_YqS");
-      const rect = panelElement.getBoundingClientRect();
-      setRel({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      });
-      setDragging(true);
-      e.stopPropagation();
-      e.preventDefault();
-    };
-    const onMouseUp = (e) => {
-      setDragging(false);
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseup", onMouseUp);
-      engine.trigger("unemploymentInfo.saveConfig");
-    };
-    const onMouseMove = (e) => {
-      if (!dragging)
-        return;
-      engine.trigger(plugin + ".updateWindow", e.clientX - rel.x, e.clientY - rel.y);
-      e.stopPropagation();
-      e.preventDefault();
-    };
-    const onMouseEnter = () => {
-      setMouseOver(true);
-    };
-    const onMouseLeave = () => {
-      setMouseOver(false);
-    };
-    const draggableStyle = {
-      ...panelStyle,
-      top: position.top + "px",
-      left: position.left + "px"
-    };
-    react.useEffect(() => {
-      if (dragging) {
-        window.addEventListener("mousemove", onMouseMove);
-        window.addEventListener("mouseup", onMouseUp);
-      }
-      return () => {
-        window.removeEventListener("mousemove", onMouseMove);
-        window.removeEventListener("mouseup", onMouseUp);
-      };
-    }, [dragging]);
-    const mouseOverHeaderStyle = !mouseOver ? { opacity: 0 } : { opacity: 1 };
-    return /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel_YqS", style: { ...draggableStyle, width: "auto", maxWidth: "300rem", ...style }, onMouseEnter, onMouseLeave }, /* @__PURE__ */ import_react6.default.createElement(
+  }
+
+  // src/jsx/_monitor-window-content.jsx
+  var import_react3 = __toESM(require_react());
+
+  // src/jsx/_monitor-item.jsx
+  var import_react2 = __toESM(require_react());
+
+  // src/jsx/_raw-stat.jsx
+  var import_react = __toESM(require_react());
+  var RawStat = ({ value, orientation }) => {
+    const react = window.$_gooee.react;
+    function formatNumber(number) {
+      var parts = number.toString().split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return parts.join(".");
+    }
+    return /* @__PURE__ */ import_react.default.createElement("div", { className: "d-flex flex-row align-items-center justify-content-center flex-1 " + (orientation === "vertical" ? "" : "pr-4"), style: orientation === "vertical" ? { minWidth: "45rem" } : null }, /* @__PURE__ */ import_react.default.createElement("strong", { className: "" }, formatNumber(parseInt(value))));
+  };
+  var raw_stat_default = RawStat;
+
+  // src/jsx/_monitor-item.jsx
+  var MonitorItem = ({
+    model,
+    windowModel,
+    editMode,
+    values,
+    monitorDisplay,
+    index,
+    _L,
+    hoveredItem,
+    onItemEnter,
+    onItemLeave,
+    onRemoveMonitor,
+    onMoveMonitorUp,
+    onMoveMonitorDown
+  }) => {
+    const react = window.$_gooee.react;
+    const { Button, Icon, ProgressBar, Modal, Container, MoveableModal, Scrollable, Dropdown, FormGroup } = window.$_gooee.framework;
+    if (!model || !model.Items)
+      return;
+    const items = model.Items.filter((i) => i.Name === monitorDisplay.MonitorItemName);
+    if (!items || items.length !== 1)
+      return null;
+    const item = items[0];
+    if (!item)
+      return null;
+    const value = values[item.Name] ? values[item.Name] : 0;
+    const isHovered = hoveredItem === item.Name;
+    const isVerticalMode = !editMode && windowModel.Orientation === "Vertical";
+    const itemElement = /* @__PURE__ */ import_react2.default.createElement(
+      Container,
+      {
+        className: "d-flex" + (isVerticalMode ? " flex-column w-x h-100 align-items-center justify-content-center mr-2" : " flex-row"),
+        title: _L(`UltimateMonitor.Monitor.${item.Name}`),
+        description: _L(`UltimateMonitor.Monitor.${item.Name}_desc`),
+        toolTipFloat: windowModel.Orientation === "Vertical" ? "left" : "down",
+        toolTipAlign: windowModel.Orientation === "Vertical" ? "center" : "center"
+      },
+      /* @__PURE__ */ import_react2.default.createElement(Icon, { style: isVerticalMode ? { marginLeft: "-2.5rem" } : null, icon: item.Icon, size: editMode ? "lg" : null }),
+      editMode ? /* @__PURE__ */ import_react2.default.createElement("h6", { className: "ml-4 mb-0" }, _L(`UltimateMonitor.Monitor.${item.Name}`)) : null,
+      editMode ? /* @__PURE__ */ import_react2.default.createElement("div", { className: "d-flex flex-row flex-1 ml-2 justify-content-end align-items-center" }, /* @__PURE__ */ import_react2.default.createElement(
+        Button,
+        {
+          circular: true,
+          border: true,
+          icon: true,
+          style: "trans-faded",
+          title: _L("UltimateMonitor.Remove"),
+          description: _L("UltimateMonitor.Remove_desc"),
+          onClick: () => onRemoveMonitor(monitorDisplay.MonitorItemName)
+        },
+        /* @__PURE__ */ import_react2.default.createElement(Icon, { className: "bg-danger", icon: "solid-minus", fa: true })
+      ), /* @__PURE__ */ import_react2.default.createElement(
+        Button,
+        {
+          className: "ml-2",
+          circular: true,
+          border: true,
+          icon: true,
+          style: "trans-faded",
+          title: _L("UltimateMonitor.MoveUp"),
+          description: _L("UltimateMonitor.MoveUp_desc"),
+          onClick: () => onMoveMonitorUp(monitorDisplay.MonitorItemName),
+          disabled: monitorDisplay.Order === 0
+        },
+        /* @__PURE__ */ import_react2.default.createElement(Icon, { icon: "solid-chevron-up", fa: true })
+      ), /* @__PURE__ */ import_react2.default.createElement(
+        Button,
+        {
+          className: "ml-2",
+          circular: true,
+          border: true,
+          icon: true,
+          style: "trans-faded",
+          title: _L("UltimateMonitor.MoveDown"),
+          description: _L("UltimateMonitor.MoveDown_desc"),
+          onClick: () => onMoveMonitorDown(monitorDisplay.MonitorItemName),
+          disabled: monitorDisplay.Order === windowModel.Monitors.length - 1
+        },
+        /* @__PURE__ */ import_react2.default.createElement(Icon, { icon: "solid-chevron-down", fa: true })
+      )) : item.Type === "ProgressBar" ? /* @__PURE__ */ import_react2.default.createElement(
+        ProgressBar,
+        {
+          className: !isVerticalMode ? "flex-1 ml-2" : "flex-1 mt-1",
+          value,
+          orientation: windowModel.Orientation.toLowerCase(),
+          color: item.Colour
+        }
+      ) : /* @__PURE__ */ import_react2.default.createElement(raw_stat_default, { orientation: windowModel.Orientation.toLowerCase(), value })
+    );
+    return /* @__PURE__ */ import_react2.default.createElement(
       "div",
       {
-        className: "header_H_U header_Bpo child-opacity-transition_nkS",
-        style: { ...mouseOverHeaderStyle, transition: "opacity 0.5s easeOut", borderRadius: "20rem" },
-        onMouseDown
+        className: (editMode && isHovered ? "bg-primary-trans-less-faded rounded-sm p-2 border-bottom-transparent" : editMode ? "border-bottom p-2" : index !== windowModel.Monitors.length - 1 && !isVerticalMode ? "mb-2" : "") + (isVerticalMode ? " w-x" : " flex-1"),
+        key: index,
+        onMouseEnter: () => onItemEnter(item),
+        onMouseLeave: () => onItemLeave()
       },
-      /* @__PURE__ */ import_react6.default.createElement("div", { className: "title-bar_PF4" }, /* @__PURE__ */ import_react6.default.createElement("div", { className: "title_SVH title_zQN" }, title))
-    ), /* @__PURE__ */ import_react6.default.createElement("div", { className: "", style: { background: "none", display: "flex", flexDirection: "column", alignItems: "center" } }, children));
+      itemElement
+    );
   };
-  var engineEffect = (react, event, setFunc) => {
-    const updateEvent = event + ".update";
-    const subscribeEvent = event + ".subscribe";
-    const unsubscribeEvent = event + ".unsubscribe";
-    return react.useEffect(() => {
-      var clear = engine.on(updateEvent, (data) => {
-        if (data.current !== void 0 && data.min !== void 0 && data.max !== void 0) {
-          const percentage = (data.current - data.min) / (data.max - data.min) * 100;
-          setFunc(percentage);
-        } else {
-          setFunc(data);
-        }
+  var monitor_item_default = MonitorItem;
+
+  // src/jsx/_monitor-window-content.jsx
+  var MonitorWindowContent = ({
+    model,
+    windowModel,
+    windowIndex,
+    editMode,
+    values,
+    subValues,
+    toggleEdit,
+    _L,
+    trigger,
+    onWindowRemoved
+  }) => {
+    const react = window.$_gooee.react;
+    const { Button, Icon, ProgressBar, Modal, Container, MoveableModal, Scrollable, Dropdown, FormGroup } = window.$_gooee.framework;
+    const [selectedAddMonitor, setSelectedAddMonitor] = react.useState(null);
+    const [hoveredItem, setHoveredItem] = react.useState(null);
+    const onItemEnter = react.useCallback((item) => {
+      setHoveredItem(item.Name);
+      engine.trigger("audio.playSound", "hover-item", 1);
+    }, []);
+    const onItemLeave = react.useCallback(() => {
+      setHoveredItem(null);
+    }, []);
+    const onSelectedAddMonitorChanged = react.useCallback((monitorName) => {
+      setSelectedAddMonitor(monitorName);
+    }, []);
+    const onAddMonitor = react.useCallback(() => {
+      if (!selectedAddMonitor || !windowModel)
+        return;
+      trigger("OnAddMonitor", JSON.stringify({
+        WindowName: windowModel.Name,
+        MonitorName: selectedAddMonitor
+      }));
+      setSelectedAddMonitor(null);
+    }, [windowModel, trigger, selectedAddMonitor]);
+    const onUpdateMonitorOrder = react.useCallback((monitorName, direction) => {
+      if (!monitorName || !windowModel)
+        return;
+      trigger("OnUpdateMonitorOrder", JSON.stringify({
+        WindowName: windowModel.Name,
+        MonitorName: monitorName,
+        Direction: direction
+      }));
+    }, [windowModel, trigger]);
+    const onRemoveMonitor = react.useCallback((monitorName) => {
+      if (!monitorName || !windowModel)
+        return;
+      trigger("OnRemoveMonitor", JSON.stringify({
+        WindowName: windowModel.Name,
+        MonitorName: monitorName
+      }));
+    }, [windowModel, trigger]);
+    const onMoveMonitorUp = react.useCallback((monitorName) => {
+      if (!monitorName || !windowModel)
+        return;
+      onUpdateMonitorOrder(monitorName, -1);
+    }, [windowModel, trigger]);
+    const onMoveMonitorDown = react.useCallback((monitorName) => {
+      if (!monitorName)
+        return;
+      onUpdateMonitorOrder(monitorName, 1);
+    }, [windowModel, trigger]);
+    const addMonitorOptions = react.useMemo(() => {
+      const items = !model.Items || !windowModel.Monitors ? null : model.Items.filter((i) => windowModel.Monitors.filter((m) => m.MonitorItemName === i.Name).length === 0);
+      let options = [];
+      if (!items)
+        return options;
+      items.forEach((item) => {
+        options.push({
+          label: _L(`UltimateMonitor.Monitor.${item.Name}`),
+          value: item.Name
+        });
       });
-      engine.trigger(subscribeEvent);
+      return options.sort((a, b) => a.label < b.label ? -1 : a.label > b.label ? 1 : 0);
+    }, [model.Items, windowModel.Monitors]);
+    const removeWindow = () => {
+      if (onWindowRemoved)
+        onWindowRemoved();
+      trigger("OnRemoveWindow", windowModel.Name);
+    };
+    const sizeOptions = [
+      {
+        label: _L("UltimateMonitor.Size.ExtraSmall"),
+        value: "ExtraSmall"
+      },
+      {
+        label: _L("UltimateMonitor.Size.Small"),
+        value: "Small"
+      },
+      {
+        label: _L("UltimateMonitor.Size.Medium"),
+        value: "Medium"
+      },
+      {
+        label: _L("UltimateMonitor.Size.Large"),
+        value: "Large"
+      }
+    ];
+    const widthSizeClassName = editMode ? "vw-25" : windowModel.Orientation === "Horizontal" ? windowModel.Size === "ExtraSmall" ? "vw-10" : windowModel.Size === "Small" ? "vw-15" : windowModel.Size === "Large" ? "vw-30" : "vw-20" : "w-x";
+    const heightSizeClassName = editMode ? "" : windowModel.Orientation === "Vertical" ? windowModel.Size === "ExtraSmall" ? "vh-15" : windowModel.Size === "Small" ? "vh-20" : windowModel.Size === "Large" ? "vh-40" : "vh-25" : "";
+    const renderProgressBars = react.useMemo(() => {
+      if (!model.Items || !windowModel.Monitors)
+        return null;
+      return /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, windowModel.Monitors.sort((a, b) => a.Order - b.Order).map((monitorDisplay, index) => /* @__PURE__ */ import_react3.default.createElement(
+        monitor_item_default,
+        {
+          key: index,
+          model,
+          windowModel,
+          values,
+          editMode,
+          _L,
+          hoveredItem,
+          monitorDisplay,
+          index,
+          onItemEnter,
+          onItemLeave,
+          onRemoveMonitor,
+          onMoveMonitorUp,
+          onMoveMonitorDown
+        }
+      )));
+    }, [model.Items, values, subValues, hoveredItem, editMode, windowModel.Monitors]);
+    const modalContent = /* @__PURE__ */ import_react3.default.createElement("div", { className: `${widthSizeClassName} ${heightSizeClassName}`, style: windowModel.Orientation === "Vertical" ? { minWidth: "48rem" } : null }, !windowModel.Monitors || windowModel.Monitors.length == 0 ? /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("div", { className: "alert d-flex flex-row align-items-center alert-danger", onClick: toggleEdit }, /* @__PURE__ */ import_react3.default.createElement(Icon, { className: "mr-4", icon: "solid-face-frown", size: "lg", fa: true }), /* @__PURE__ */ import_react3.default.createElement("div", { className: "flex-1 ml-x w-x" }, /* @__PURE__ */ import_react3.default.createElement("h5", { className: "mb-0" }, _L("UltimateMonitor.NoMonitors")), /* @__PURE__ */ import_react3.default.createElement("p", { cohinline: "cohinline", className: "d-inline" }, _L("UltimateMonitor.NoMonitors_desc"))))) : /* @__PURE__ */ import_react3.default.createElement("div", { className: `progress-bar-group ${windowModel.Orientation.toLowerCase()}` }, renderProgressBars));
+    const onSelectOrientation = react.useCallback((orientation) => {
+      windowModel.Orientation = orientation;
+      model.Windows[windowIndex].Orientation = orientation;
+      trigger("OnUpdateMonitorWindow", JSON.stringify({ "WindowName": windowModel.Name, "Orientation": orientation }));
+    }, [windowModel, model.Windows]);
+    const onSelectSize = react.useCallback((size) => {
+      windowModel.Size = size;
+      model.Windows[windowIndex].Size = size;
+      trigger("OnUpdateMonitorWindow", JSON.stringify({ "WindowName": windowModel.Name, "Size": size }));
+    }, [windowModel, model.Windows]);
+    const editModalContent = /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, /* @__PURE__ */ import_react3.default.createElement("div", { className: "d-flex flex-row p-2 align-items-center bg-section-dark" }, /* @__PURE__ */ import_react3.default.createElement(
+      Container,
+      {
+        className: "w-x",
+        title: _L(`UltimateMonitor.${windowModel.Orientation}.Size`),
+        description: _L(`UltimateMonitor.${windowModel.Orientation}.Size_desc`)
+      },
+      /* @__PURE__ */ import_react3.default.createElement(Icon, { className: "mr-2 bg-muted", icon: windowModel.Orientation === "Horizontal" ? "solid-left-right" : "solid-up-down", fa: true })
+    ), /* @__PURE__ */ import_react3.default.createElement(
+      Dropdown,
+      {
+        selected: windowModel.Size,
+        options: sizeOptions,
+        size: "sm",
+        className: "w-25 mr-2",
+        toggleClassName: "bg-dark-trans-less-faded",
+        onSelectionChanged: onSelectSize
+      }
+    ), /* @__PURE__ */ import_react3.default.createElement("div", { className: "btn-group w-x ml-x" }, /* @__PURE__ */ import_react3.default.createElement(
+      Button,
+      {
+        color: windowModel.Orientation === "Horizontal" ? "primary" : "dark",
+        title: _L("UltimateMonitor.Horizontal"),
+        description: _L("UltimateMonitor.Horizontal_desc"),
+        style: "trans",
+        size: "xs",
+        onClick: () => onSelectOrientation("Horizontal")
+      },
+      /* @__PURE__ */ import_react3.default.createElement(Icon, { icon: "solid-ruler-horizontal", fa: true })
+    ), /* @__PURE__ */ import_react3.default.createElement(
+      Button,
+      {
+        color: windowModel.Orientation === "Vertical" ? "primary" : "dark",
+        title: _L("UltimateMonitor.Vertical"),
+        description: _L("UltimateMonitor.Vertical_desc"),
+        style: "trans",
+        size: "xs",
+        onClick: () => onSelectOrientation("Vertical")
+      },
+      /* @__PURE__ */ import_react3.default.createElement(Icon, { icon: "solid-ruler-vertical", fa: true })
+    )), /* @__PURE__ */ import_react3.default.createElement(
+      Dropdown,
+      {
+        selected: selectedAddMonitor,
+        options: addMonitorOptions,
+        size: "sm",
+        className: "flex-1 ml-2 mr-2",
+        toggleClassName: "bg-dark-trans-less-faded",
+        onSelectionChanged: onSelectedAddMonitorChanged
+      }
+    ), /* @__PURE__ */ import_react3.default.createElement("div", { className: "btn-group w-x ml-x" }, /* @__PURE__ */ import_react3.default.createElement(
+      Button,
+      {
+        color: "primary",
+        style: "trans",
+        size: "xs",
+        title: _L("UltimateMonitor.Add"),
+        description: _L("UltimateMonitor.Add_desc"),
+        onClick: onAddMonitor,
+        disabled: selectedAddMonitor == null
+      },
+      /* @__PURE__ */ import_react3.default.createElement(Icon, { icon: "solid-plus", fa: true })
+    ))), !windowModel.Monitors || windowModel.Monitors.length == 0 ? /* @__PURE__ */ import_react3.default.createElement("div", { className: "p-4 flex-1" }, /* @__PURE__ */ import_react3.default.createElement("div", { className: "alert d-flex flex-row align-items-center alert-info" }, /* @__PURE__ */ import_react3.default.createElement(Icon, { className: "mr-4", icon: "solid-circle-info", size: "lg", fa: true }), /* @__PURE__ */ import_react3.default.createElement("div", { className: "flex-1 ml-x" }, /* @__PURE__ */ import_react3.default.createElement("h5", { className: "mb-0" }, _L("UltimateMonitor.NoMonitorsEdit")), /* @__PURE__ */ import_react3.default.createElement("p", { cohinline: "cohinline", className: "d-inline" }, _L("UltimateMonitor.NoMonitorsEdit_desc"))))) : /* @__PURE__ */ import_react3.default.createElement(Scrollable, { className: "h-x flex-1" }, /* @__PURE__ */ import_react3.default.createElement("div", { className: "progress-bar-group horizontal" }, renderProgressBars)), /* @__PURE__ */ import_react3.default.createElement("div", { className: "d-flex flex-row justify-content-end align-items-center bg-section-dark p-4 mt-2" }, windowModel.Name !== "Default" ? /* @__PURE__ */ import_react3.default.createElement(
+      Button,
+      {
+        className: "mr-1",
+        stopClickPropagation: "true",
+        color: "danger",
+        size: "xs",
+        title: _L("UltimateMonitor.RemoveWindow"),
+        description: _L("UltimateMonitor.RemoveWindow_desc"),
+        circular: true,
+        style: "trans",
+        onClick: removeWindow
+      },
+      /* @__PURE__ */ import_react3.default.createElement(Icon, { className: "bg-white", icon: "solid-trash", fa: true }),
+      /* @__PURE__ */ import_react3.default.createElement("span", { className: "text-white ml-2 text-uppercase" }, _L("UltimateMonitor.RemoveWindow"))
+    ) : null, /* @__PURE__ */ import_react3.default.createElement(Button, { stopClickPropagation: "true", color: "success", size: "xs", title: _L("UltimateMonitor.Done"), description: _L("UltimateMonitor.Done_desc"), style: "trans", onClick: toggleEdit }, /* @__PURE__ */ import_react3.default.createElement(Icon, { className: "bg-white", icon: "solid-check", fa: true }), /* @__PURE__ */ import_react3.default.createElement("span", { className: "text-white ml-2 text-uppercase" }, _L("UltimateMonitor.Done")))));
+    return editMode ? editModalContent : modalContent;
+  };
+  var monitor_window_content_default = MonitorWindowContent;
+
+  // src/jsx/_monitor-window.jsx
+  var MonitorWindow = ({
+    windowModel,
+    windowIndex,
+    visible,
+    model,
+    trigger,
+    update,
+    values,
+    subValues,
+    _L,
+    onDragStart,
+    onDragEnd,
+    disableDrag
+  }) => {
+    const react = window.$_gooee.react;
+    const [guid] = react.useState(ReactId());
+    const { Button, Icon, ProgressBar, Modal, Container, MoveableModal, Scrollable, Dropdown, FormGroup } = window.$_gooee.framework;
+    const [mouseOverModal, setMouseOverModal] = react.useState(false);
+    const [editMode, setEditMode] = react.useState(false);
+    react.useEffect(() => {
+      const handleVisibilityChange = (event) => {
+        if (event.detail.guid !== guid && editMode) {
+          setEditMode(false);
+        }
+      };
+      document.addEventListener("MonitorWindowEditMode", handleVisibilityChange);
       return () => {
-        engine.trigger(unsubscribeEvent);
-        clear.clear();
+        document.removeEventListener("MonitorWindowEditMode", handleVisibilityChange);
+      };
+    }, [editMode]);
+    const closeModal = () => {
+      trigger("OnToggleWindow", windowModel.Name);
+      engine.trigger("audio.playSound", "close-panel", 1);
+    };
+    const toggleEdit = () => {
+      const newValue = !editMode;
+      if (newValue) {
+        setMouseOverModal(false);
+        const event = new CustomEvent("MonitorWindowEditMode", {
+          detail: { guid }
+        });
+        document.dispatchEvent(event);
+      }
+      setEditMode(newValue);
+    };
+    const onMouseEnterModal = react.useCallback(() => {
+      if (disableDrag)
+        return;
+      setMouseOverModal(true);
+    }, [disableDrag]);
+    const onMouseLeaveModal = react.useCallback(() => {
+      if (disableDrag)
+        return;
+      setMouseOverModal(false);
+    }, [disableDrag]);
+    const modalButtons = mouseOverModal ? /* @__PURE__ */ import_react4.default.createElement("div", { className: "modal-buttons w-x d-inline" }, /* @__PURE__ */ import_react4.default.createElement(
+      Button,
+      {
+        stopClickPropagation: "true",
+        size: "sm",
+        title: _L("UltimateMonitor.Edit"),
+        description: _L("UltimateMonitor.Edit_desc"),
+        circular: editMode ? null : true,
+        icon: editMode ? null : true,
+        style: editMode ? "trans" : "trans-faded",
+        onClick: toggleEdit
+      },
+      /* @__PURE__ */ import_react4.default.createElement(Icon, { icon: "solid-pencil", fa: true })
+    )) : null;
+    const onUpdateWindowPos = (pos) => {
+      trigger("OnUpdateWindowPosition", JSON.stringify({
+        windowName: windowModel.Name,
+        x: parseInt(pos.x),
+        y: parseInt(pos.y)
+      }));
+    };
+    const onWindowRemoved = () => {
+      setEditMode(false);
+    };
+    const renderModal = editMode ? /* @__PURE__ */ import_react4.default.createElement(Modal, { title: `UM - ${windowModel.Name}`, bodyClassName: "p-0", size: "sm", fixed: true, icon: modalButtons, onClose: toggleEdit }, /* @__PURE__ */ import_react4.default.createElement(
+      monitor_window_content_default,
+      {
+        windowIndex,
+        model,
+        windowModel,
+        values,
+        subValues,
+        onWindowRemoved,
+        editMode,
+        toggleEdit,
+        _L,
+        trigger
+      }
+    )) : /* @__PURE__ */ import_react4.default.createElement(
+      MoveableModal,
+      {
+        className: mouseOverModal ? "" : " modal-transparent",
+        onClose: closeModal,
+        noClose: !mouseOverModal && !editMode,
+        onMouseEnter: onMouseEnterModal,
+        onMouseLeave: onMouseLeaveModal,
+        pos: windowModel.Position,
+        onStartDrag: () => onDragStart(windowModel.Name),
+        onEndDrag: () => onDragEnd(),
+        onUpdateDrag: onUpdateWindowPos,
+        disableDrag,
+        icon: modalButtons,
+        title: mouseOverModal && windowModel.Orientation !== "Vertical" ? windowModel.Name : null
+      },
+      /* @__PURE__ */ import_react4.default.createElement(
+        monitor_window_content_default,
+        {
+          windowIndex,
+          model,
+          windowModel,
+          values,
+          subValues,
+          onWindowRemoved,
+          editMode,
+          toggleEdit,
+          _L,
+          trigger
+        }
+      )
+    );
+    const renderBody = visible ? renderModal : null;
+    return renderBody;
+  };
+  var monitor_window_default = MonitorWindow;
+
+  // src/jsx/_add-window.jsx
+  var import_react5 = __toESM(require_react());
+  var AddWindow = ({ trigger, _L }) => {
+    const react = window.$_gooee.react;
+    const [windowName, setWindowName] = react.useState("");
+    const { Button, Icon, Modal, FormGroup, TextBox } = window.$_gooee.framework;
+    const onChangeName = (val) => {
+      setWindowName(val);
+    };
+    const onAddWindow = () => {
+      if (!windowName || windowName.length == 0)
+        return;
+      trigger("OnAddWindow", windowName);
+    };
+    const onCloseAddWindow = () => {
+      trigger("OnToggleAddWindow");
+    };
+    return /* @__PURE__ */ import_react5.default.createElement("div", { className: "d-flex flex-row align-items-center justify-content-center w-100 h-100" }, /* @__PURE__ */ import_react5.default.createElement(Modal, { title: "Add Ultimate Monitor window", size: "sm", onClose: onCloseAddWindow }, /* @__PURE__ */ import_react5.default.createElement(FormGroup, { label: "Name" }, /* @__PURE__ */ import_react5.default.createElement(TextBox, { text: windowName, onChange: onChangeName })), /* @__PURE__ */ import_react5.default.createElement(Button, { onClick: onAddWindow, className: "text-black d-inline", color: "success", size: "sm" }, /* @__PURE__ */ import_react5.default.createElement(Icon, { className: "mr-2", icon: "solid-check", fa: true }), /* @__PURE__ */ import_react5.default.createElement("span", null, "Save"))));
+  };
+  var add_window_default = AddWindow;
+
+  // src/jsx/ui.jsx
+  var ToolWindow = ({ react, setupController }) => {
+    const { model, update, trigger, _L } = setupController();
+    const [values, setValues] = react.useState({});
+    const [subValues, setSubValues] = react.useState({});
+    const [draggingWindow, setDraggingWindow] = react.useState(null);
+    const onDragStart = (windowName) => {
+      setDraggingWindow(windowName);
+    };
+    const onDragEnd = () => {
+      setDraggingWindow(null);
+    };
+    const builtIn = react.useMemo(() => {
+      return {
+        sum: (vals) => {
+          const values2 = Object.values(vals);
+          return values2.reduce((acc, curr) => acc + curr, 0);
+        },
+        average: (vals) => {
+          const values2 = Object.values(vals);
+          const sum = values2.reduce((acc, curr) => acc + curr, 0);
+          return sum / values2.length;
+        },
+        median: (vals) => {
+          const values2 = Object.values(vals).sort((a, b) => a - b);
+          const mid = Math.floor(values2.length / 2);
+          return values2.length % 2 !== 0 ? values2[mid] : (values2[mid - 1] + values2[mid]) / 2;
+        },
+        min: (vals) => {
+          const values2 = Object.values(vals);
+          return Math.min(...values2);
+        },
+        max: (vals) => {
+          const values2 = Object.values(vals);
+          return Math.max(...values2);
+        },
+        variance: (vals) => {
+          const values2 = Object.values(vals);
+          const mean = builtIn.average(vals);
+          return values2.reduce((acc, curr) => acc + Math.pow(curr - mean, 2), 0) / values2.length;
+        },
+        standardDeviation: (vals) => {
+          const variance = builtIn.variance(vals);
+          return Math.sqrt(variance);
+        },
+        custom: (name) => {
+          switch (name) {
+            case "IncomeEfficiency":
+              return (vals) => {
+                if (!vals || Object.keys(vals).length != 2)
+                  return 0;
+                const totalExpenses = vals["budget.totalExpenses"];
+                const totalIncome = vals["budget.totalIncome"];
+                const netIncome = totalIncome + totalExpenses;
+                const percent = netIncome / (totalIncome + Math.abs(totalExpenses));
+                return percent;
+              };
+            case "MonthlyPopulationGrowth":
+              return (vals) => {
+                if (!vals || Object.keys(vals).length != 5)
+                  return 0;
+                const population = vals["populationInfo.population"];
+                const birthRate = vals["populationInfo.birthRate"];
+                const movedIn = vals["populationInfo.movedIn"];
+                const movedAway = vals["populationInfo.movedAway"];
+                const deathRate = vals["populationInfo.deathRate"];
+                const positive = birthRate + movedIn;
+                const negative = deathRate + movedAway;
+                const percent = (positive + negative) / population;
+                return percent;
+              };
+            case "TrafficFlow":
+              return (vals) => {
+                if (!vals || Object.keys(vals).length != 1)
+                  return 0;
+                const trafficFlow = vals["trafficInfo.trafficFlow"];
+                let total = 0;
+                if (trafficFlow && trafficFlow.length > 0) {
+                  trafficFlow.forEach((val) => {
+                    total += val;
+                  });
+                }
+                return trafficFlow ? total / trafficFlow.length / 100 : 0;
+              };
+          }
+          console.warn(`No custom handler for ${name}!`);
+          return (vals) => {
+          };
+        }
       };
     }, []);
-  };
-  var $Progress = ({ react, percentage, text, minValue = 0, customColor = null, maxValue = 100, onMouseEnter, isReversed = false, hideShortLabel = false, showFullLabel = false, orientation = "vertical", icon = null }) => {
-    function lerpColor(color1, color2, factor) {
-      var result = color1.slice(1).match(/.{2}/g).map((hexNum, index) => {
-        const color1Value = parseInt(hexNum, 16);
-        const color2Value = parseInt(color2.slice(1).match(/.{2}/g)[index], 16);
-        const interpolatedValue = Math.round(color1Value + (color2Value - color1Value) * factor);
-        const hexResult = interpolatedValue.toString(16);
-        return hexResult.padStart(2, "0");
-      }).join("");
-      return `#${result}`;
-    }
-    function calculateAdjustedFactor(percentage2, minAcceptableValue = 0, maxAcceptableValue = 100) {
-      let adjustedFactor2;
-      if (percentage2 <= minAcceptableValue) {
-        adjustedFactor2 = 0;
-      } else if (percentage2 >= maxAcceptableValue) {
-        adjustedFactor2 = 1;
-      } else {
-        adjustedFactor2 = (percentage2 - minAcceptableValue) / (maxAcceptableValue - minAcceptableValue);
-      }
-      return adjustedFactor2;
-    }
-    function hexToRGBA(hex, alpha) {
-      if (hex[0] !== "#") {
-        hex = "#" + hex;
-      }
-      if (hex.length === 4) {
-        hex = "#" + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
-      }
-      let r = parseInt(hex.slice(1, 3), 16);
-      let g = parseInt(hex.slice(3, 5), 16);
-      let b = parseInt(hex.slice(5, 7), 16);
-      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-    }
-    function hexToHSL(hex) {
-      let r = 0, g = 0, b = 0;
-      if (hex.length == 4) {
-        r = parseInt(hex[1] + hex[1], 16);
-        g = parseInt(hex[2] + hex[2], 16);
-        b = parseInt(hex[3] + hex[3], 16);
-      } else if (hex.length == 7) {
-        r = parseInt(hex.slice(1, 3), 16);
-        g = parseInt(hex.slice(3, 5), 16);
-        b = parseInt(hex.slice(5, 7), 16);
-      }
-      r /= 255;
-      g /= 255;
-      b /= 255;
-      const max = Math.max(r, g, b), min = Math.min(r, g, b);
-      let h, s, l = (max + min) / 2;
-      if (max == min) {
-        h = s = 0;
-      } else {
-        const d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch (max) {
-          case r:
-            h = (g - b) / d + (g < b ? 6 : 0);
-            break;
-          case g:
-            h = (b - r) / d + 2;
-            break;
-          case b:
-            h = (r - g) / d + 4;
-            break;
-        }
-        h /= 6;
-      }
-      return { h: h * 360, s: s * 100, l: l * 100 };
-    }
-    function darkenHex(hex, amount) {
-      let { h, s, l } = hexToHSL(hex);
-      l = Math.max(0, l - amount);
-      l /= 100;
-      const a = s * Math.min(l, 1 - l) / 100;
-      const f = (n) => {
-        const k = (n + h / 30) % 12;
-        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-        return Math.round(255 * color).toString(16).padStart(2, "0");
-      };
-      return `#${f(0)}${f(8)}${f(4)}`;
-    }
-    const rootStyle = getComputedStyle(document.documentElement);
-    const negativeColor = rootStyle.getPropertyValue("--negativeColor").trim();
-    const positiveColor = rootStyle.getPropertyValue("--positiveColor").trim();
-    const adjustedFactor = calculateAdjustedFactor(percentage, minValue, maxValue);
-    const interpolatedColor = customColor ? customColor : lerpColor(isReversed ? negativeColor : positiveColor, isReversed ? positiveColor : negativeColor, adjustedFactor);
-    const opacityOverride = hideShortLabel && !showFullLabel ? 0.75 : 1;
-    const [showInternalLabel, setShowInternalLabel] = react.useState(false);
-    const onMouseEnterFunc = () => {
-      if (onMouseEnter)
-        onMouseEnter();
-      if (orientation === "horizontal")
-        setShowInternalLabel(true);
-      else
-        setShowInternalLabel(false);
-    };
-    const onMouseLeaveFunc = () => {
-      setShowInternalLabel(false);
-    };
-    if (orientation === "vertical") {
-      const containerStyle = {
-        width: "20rem",
-        // Width of the progress bar
-        height: "150rem",
-        flex: 1,
-        backgroundColor: hexToRGBA(darkenHex(interpolatedColor, 20), 0.5 * opacityOverride),
-        // Color of the empty part of the progress bar
-        borderRadius: "20rem",
-        // Optional: if you want rounded corners
-        position: "relative",
-        display: "flex",
-        flexDirection: "column-reverse",
-        // To start filling from the bottom
-        alignItems: "center",
-        // Center children horizontally
-        border: `2rem solid ${showFullLabel ? "rgba(255,255,255,0.8)" : hexToRGBA(interpolatedColor, 0.8 * opacityOverride)}`,
-        boxShadow: "rgba(0, 0, 0, 0.16) 0px 5rem 10rem",
-        transition: "border 0.5s easeOut, backgroundColor 0.5s easeOut"
-      };
-      const progressBarStyle = {
-        backgroundColor: hexToRGBA(interpolatedColor, 0.8 * opacityOverride),
-        // Color of the progress indicator
-        width: "100%",
-        // Full width of the container
-        height: `${percentage}%`,
-        // Height of the progress bar based on the percentage
-        borderRadius: "20rem",
-        // Optional: if you want rounded corners
-        transition: "height 0.5s easeOut, backgroundColor 0.5s easeOut"
-      };
-      const textStyle = {
-        color: "#FFFFFF",
-        // Text color
-        fontWeight: "bold",
-        // Optional: if you want bold text
-        fontSize: "11rem",
-        textShadow: "1rem 1rem 5rem rgba(0,0,0,1)",
-        opacity: opacityOverride,
-        transition: "opacity 0.5s easeOut"
-      };
-      return /* @__PURE__ */ import_react6.default.createElement("div", { style: { width: "35rem", display: "flex", flexDirection: "column", alignItems: "center" }, onMouseEnter: onMouseEnterFunc, onMouseLeave: onMouseLeaveFunc }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { ...textStyle, marginBottom: "10rem", fontSize: "14rem" } }, icon ? /* @__PURE__ */ import_react6.default.createElement("img", { className: "icon_HoD icon_soN icon_Iwk", src: icon }) : !showFullLabel && !hideShortLabel ? text.substring(0, 2).toUpperCase() : /* @__PURE__ */ import_react6.default.createElement("span", null, "\xA0")), /* @__PURE__ */ import_react6.default.createElement("div", { style: containerStyle }, /* @__PURE__ */ import_react6.default.createElement("div", { style: progressBarStyle })), /* @__PURE__ */ import_react6.default.createElement("div", { style: { ...textStyle, marginTop: "5rem" } }, percentage + "%"));
-    } else {
-      let formatNumber = function(number) {
-        let numStr = number.toString();
-        let decimalIndex = numStr.indexOf(".");
-        if (decimalIndex === -1 || parseFloat(parseInt(number)) == number) {
-          return numStr;
-        }
-        let endIndex = decimalIndex + 2;
-        let formattedStr = numStr.length > endIndex ? numStr.substring(0, endIndex) : numStr;
-        return formattedStr;
-      };
-      const containerStyle = {
-        width: "calc(270rem-48rem)",
-        // Width of the progress bar
-        height: "20rem",
-        flex: 1,
-        flexWrap: "wrap",
-        backgroundColor: hexToRGBA(darkenHex(interpolatedColor, 20), 0.5 * opacityOverride),
-        // Color of the empty part of the progress bar
-        borderRadius: "20rem",
-        // Optional: if you want rounded corners
-        position: "relative",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        // Center children horizontally
-        border: `2rem solid ${showFullLabel ? "rgba(255,255,255,0.8)" : hexToRGBA(interpolatedColor, 0.8 * opacityOverride)}`,
-        boxShadow: "rgba(0, 0, 0, 0.16) 0px 5rem 10rem",
-        transition: "border 0.5s easeOut, backgroundColor 0.5s easeOut"
-      };
-      const progressBarStyle = {
-        backgroundColor: hexToRGBA(interpolatedColor, 0.8 * opacityOverride),
-        // Color of the progress indicator
-        width: `${percentage}%`,
-        // Full width of the container
-        height: "100%",
-        // Height of the progress bar based on the percentage
-        borderRadius: "20rem",
-        // Optional: if you want rounded corners
-        transition: "height 0.5s easeOut, backgroundColor 0.5s easeOut"
-      };
-      const textStyle = {
-        color: "#FFFFFF",
-        // Text color
-        fontWeight: "bold",
-        // Optional: if you want bold text
-        fontSize: "11rem",
-        width: "48rem",
-        height: "100%",
-        overflowX: "hidden",
-        textShadow: "1rem 1rem 5rem rgba(0,0,0,1)",
-        opacity: opacityOverride,
-        transition: "opacity 0.5s easeOut"
-      };
-      const textStyle2 = {
-        position: "absolute",
-        left: "0",
-        top: "0",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        alignItems: "center",
-        textTransform: "uppercase",
-        justifyContent: "center",
-        color: "#FFFFFF",
-        // Text color
-        fontWeight: "bold",
-        // Optional: if you want bold text
-        fontSize: "11rem",
-        textShadow: "1rem 1rem 5rem rgba(0,0,0,1)",
-        opacity: opacityOverride,
-        transition: "opacity 0.5s easeOut"
-      };
-      const percentageText = formatNumber(parseFloat(percentage));
-      return /* @__PURE__ */ import_react6.default.createElement("div", { style: { position: "relative", width: "100%", height: "20rem", display: "flex", flexDirection: "row", alignItems: "center", marginBottom: "10rem" }, onMouseEnter: onMouseEnterFunc, onMouseLeave: onMouseLeaveFunc }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { ...textStyle, fontSize: "14rem", display: "flex", alignItems: "center", justifyContent: "center" } }, icon ? /* @__PURE__ */ import_react6.default.createElement("img", { className: "icon_HoD icon_soN icon_Iwk", style: { width: "32rem", height: "32rem" }, src: icon }) : !showFullLabel && !hideShortLabel ? text.substring(0, 2).toUpperCase() : /* @__PURE__ */ import_react6.default.createElement("span", null, "\xA0")), /* @__PURE__ */ import_react6.default.createElement("div", { style: containerStyle }, /* @__PURE__ */ import_react6.default.createElement("div", { style: progressBarStyle }), showInternalLabel ? /* @__PURE__ */ import_react6.default.createElement("div", { style: textStyle2 }, text) : /* @__PURE__ */ import_react6.default.createElement("div", { style: textStyle2 }, percentageText + "%")));
-    }
-  };
-  var minGood = "linear-gradient(to right,rgba(71, 148, 54, 1.000000) 0.000000%, rgba(99, 181, 6, 1.000000) 5.000000%, rgba(255, 131, 27, 1.000000) 7.500000%, rgba(255, 78, 24, 1.000000) 10.000000%)";
-  var meterEventsToListenTo = [
-    ["Total", "unemploymentInfo.unemploymentTotal", minGood],
-    ["Uneducated", "unemploymentInfo.unemploymentEducation0", minGood],
-    ["Poorly Educated", "unemploymentInfo.unemploymentEducation1", minGood],
-    ["Educated", "unemploymentInfo.unemploymentEducation2", minGood],
-    ["Well Educated", "unemploymentInfo.unemploymentEducation3", minGood],
-    ["Highly Educated", "unemploymentInfo.unemploymentEducation4", minGood]
-  ];
-  var labelEventsToListenTo = [
-    ["Unemployed", "unemploymentInfo.unemployed"],
-    ["Under Employed", "unemploymentInfo.underEmployed"],
-    ["Homeless Households", "unemploymentInfo.homelessHouseholds"]
-  ];
-  var $UnemploymentMonitor = ({ react }) => {
-    const [hoveredItem, setHoveredItem] = react.useState("");
-    const labels = labelEventsToListenTo.map(([label, eventName], index) => {
-      const [read, set] = react.useState(-1);
-      const [vector, setVector] = react.useState(0);
-      const [diff, setDiff] = react.useState(0);
-      engineEffect(react, eventName, set);
-      engineEffect(react, `${eventName}Vector`, setVector);
-      engineEffect(react, `${eventName}Diff`, setDiff);
-      const icon = eventName === "unemploymentInfo.employable" ? "" : vector == 1 ? "Media/Glyphs/ThickStrokeArrowUp.svg" : vector == -1 ? "Media/Glyphs/ThickStrokeArrowDown.svg" : "";
-      const iconStyle = eventName === "unemploymentInfo.employable" ? 0 : vector == 1 ? { backgroundColor: "var(--negativeColor)" } : vector == -1 ? { backgroundColor: "var(--positiveColor)" } : {};
-      return /* @__PURE__ */ import_react6.default.createElement($Stat, { key: eventName, label, icon, diff, iconStyle, value: read });
-    });
-    const meters = meterEventsToListenTo.map(([label, eventName, gradient]) => {
-      const [read, set] = react.useState(-1);
-      engineEffect(react, eventName, set);
-      const showFullLabel = hoveredItem === label;
-      const hideShortLabel = hoveredItem !== "";
-      const onMouseEnter = () => {
-        setHoveredItem(label);
-      };
-      return /* @__PURE__ */ import_react6.default.createElement($Progress, { react, percentage: read, text: label, minValue: "0", maxValue: "40", color: "#00ff43", hideShortLabel, showFullLabel, onMouseEnter });
-    });
-    const textStyle = {
-      color: "#FFFFFF",
-      // Text color
-      fontWeight: "bold",
-      // Optional: if you want bold text
-      fontSize: "14rem",
-      textShadow: "1rem 1rem 5rem rgba(0,0,0,1)"
-    };
-    const onMouseLeave = () => {
-      setHoveredItem("");
-    };
-    return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement($Panel, { title: "Unemployment", react, plugin: "unemploymentInfo", style: { maxWidth: "200rem" } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { padding: "7.5rem", marginBottom: "10rem" } }, labels), /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexDirection: "row", marginTop: "5rem", position: "relative", width: "200rem", overflowX: "hidden" }, onMouseLeave }, ...meters, hoveredItem !== "" ? /* @__PURE__ */ import_react6.default.createElement("div", { style: { ...textStyle, position: "absolute", left: 0, top: "-2.5rem", width: "100%", whiteSpace: "nowrap", textTransform: "uppercase", textAlign: "center" } }, hoveredItem) : null)));
-  };
-  window._$hookui.registerPanel({
-    id: "cities2modding.unemploymentmonitor",
-    name: "Unemployment Monitor",
-    icon: "Media/Game/Icons/Workers.svg",
-    component: $UnemploymentMonitor
-  });
-  var calculateAverage = (vals) => {
-    let sum = 0;
-    const values = Object.values(vals);
-    for (let i = 0; i < values.length; i++) {
-      sum += values[i];
-    }
-    return sum / values.length;
-  };
-  var $CityMonitor = ({ react }) => {
-    const eventsToListenTo = [
-      ["Electricity", "electricityInfo.electricityAvailability", "Media/Game/Icons/Electricity.svg", "#FFB80E", null],
-      ["Water", "waterInfo.waterAvailability", "Media/Game/Icons/Water.svg", "#39C2FF", null],
-      ["Sewage", "waterInfo.sewageAvailability", "Media/Game/Icons/Sewage.svg", "#997E62", null],
-      ["Garbage Processing", "garbageInfo.processingAvailability", "Media/Game/Icons/Garbage.svg", "#31CF00", null],
-      // TODO Crematorium
-      ["Fire Hazard", "fireAndRescueInfo.averageFireHazard", "Media/Game/Icons/FireSafety.svg", null, null],
-      ["Crime Rate", "policeInfo.averageCrimeProbability", "Media/Game/Notifications/CrimeScene.svg", "#255D95", null],
-      ["Traffic Flow", "trafficInfo.trafficFlow", "Media/Game/Icons/TrafficLights.svg", "#808080", (flow) => {
-        let total = 0;
-        flow.forEach((val) => {
-          total += val;
+    const runValueFunc = (liveValues, item) => {
+      let values2 = {};
+      if (item.ValueSubscriptions && item.ValueSubscriptions.length > 0) {
+        item.ValueSubscriptions.forEach((sub) => {
+          const val = liveValues[sub];
+          values2[sub] = val;
         });
-        let avg = total / flow.length;
-        return avg;
-      }],
-      ["Parking Availability", "roadsInfo.parkingAvailability", "Media/Game/Icons/Parking.svg", "#808080", null]
-    ];
-    const combinedEventsToListenTo = [
-      ["Healthcare Efficiency", ["healthcareInfo.healthcareAvailability", "healthcareInfo.averageHealth"], "Media/Game/Icons/Healthcare.svg", "#E56333", calculateAverage],
-      ["Deathcare Efficiency", ["healthcareInfo.cemeteryAvailability", "healthcareInfo.deathcareAvailability"], "Media/Game/Icons/Deathcare.svg", "#797979", calculateAverage],
-      ["Imprisonment Capacity", ["policeInfo.jailAvailability", "policeInfo.prisonAvailability"], "Media/Game/Icons/Police.svg", "#FFB80E", calculateAverage],
-      ["Education Availability", [
-        "educationInfo.elementaryAvailability",
-        "educationInfo.highSchoolAvailability",
-        "educationInfo.collegeAvailability",
-        "educationInfo.universityAvailability"
-      ], "Media/Game/Icons/Education.svg", "#61819C", calculateAverage],
-      ["Income Efficiency", [
-        "budget.totalIncome",
-        "budget.totalExpenses"
-      ], "Media/Game/Icons/Money.svg", "#9ADF4B", (vals) => {
-        const values = Object.values(vals);
-        if (values.length != 2)
-          return 0;
-        var netIncome = values[0] + values[1];
-        var percent = netIncome / (values[0] + Math.abs(values[1])) * 100;
-        return percent;
-      }],
-      ["Monthly Population Growth", [
-        "populationInfo.population",
-        "populationInfo.birthRate",
-        "populationInfo.movedIn",
-        "populationInfo.deathRate",
-        "populationInfo.movedAway"
-      ], "Media/Game/Icons/Population.svg", "#97B4BE", (vals) => {
-        const values = Object.values(vals);
-        if (values.length != 5)
-          return 0;
-        var positive = values[1] + values[2];
-        var negative = values[3] + values[4];
-        var percent = (positive + negative) / values[0] * 100;
-        return percent;
-      }],
-      ["Avg. Pollution", [
-        "pollutionInfo.averageGroundPollution",
-        "pollutionInfo.averageWaterPollution",
-        "pollutionInfo.averageAirPollution",
-        "pollutionInfo.averageNoisePollution"
-      ], "Media/Game/Icons/GroundPollution.svg", "#9D662E", calculateAverage]
-      // TODO Employment Rate
-    ];
-    const [hoveredItem, setHoveredItem] = react.useState("");
-    const meters = eventsToListenTo.map(([label, eventName, icon, customColor, valueFunc]) => {
-      const [read, set] = react.useState(-1);
-      const update = (newVal) => {
-        if (valueFunc)
-          set(valueFunc(newVal));
-        else
-          set(newVal);
-      };
-      engineEffect(react, eventName, update);
-      const showFullLabel = hoveredItem === label;
-      const hideShortLabel = hoveredItem !== "";
-      const onMouseEnter = () => {
-        setHoveredItem(label);
-      };
-      return /* @__PURE__ */ import_react6.default.createElement($Progress, { react, customColor, icon, isReversed: "true", orientation: "horizontal", percentage: read, text: label, minValue: "50", maxValue: "100", color: "#00ff43", hideShortLabel, showFullLabel, onMouseEnter });
-    });
-    const [eventValues, setEventValues] = react.useState({});
-    const combinedMeters = combinedEventsToListenTo.map(([label, eventNames, icon, customColor, valuesFunc]) => {
-      const [read, set] = react.useState({});
-      const [value, setValue] = react.useState(0);
-      eventNames.map((eventName) => {
-        const update = (newVal) => {
-          set((prev) => {
-            const newSet = { ...prev, [eventName]: newVal };
-            return newSet;
-          });
-          set((prev) => {
-            setValue(valuesFunc(prev));
-            return prev;
-          });
-        };
-        engineEffect(react, eventName, update);
+      }
+      let value;
+      if (Object.keys(values2).length > 0) {
+        const operation = item.ValueOperation;
+        switch (operation) {
+          case "Average":
+            value = builtIn.average(values2) / 100;
+            break;
+          case "Median":
+            value = builtIn.median(values2) / 100;
+            break;
+          case "Sum":
+            value = builtIn.sum(values2) / 100;
+            break;
+          case "Min":
+            value = builtIn.min(values2) / 100;
+            break;
+          case "Max":
+            value = builtIn.max(values2) / 100;
+            break;
+          case "Variance":
+            value = builtIn.variance(values2) / 100;
+            break;
+          case "StandardDeviation":
+            value = builtIn.standardDeviation(values2) / 100;
+            break;
+          case "Custom":
+            var func = builtIn.custom(item.Name);
+            if (func) {
+              value = func(values2);
+            }
+            break;
+          case "None":
+            if (values2 && item.ValueSubscriptions)
+              value = item.Type !== "Raw" ? values2[item.ValueSubscriptions[0]] / 100 : values2[item.ValueSubscriptions[0]];
+            break;
+        }
+      }
+      return isNaN(value) ? 0 : value;
+    };
+    const setSubValueFunc = (item, key, data) => {
+      setSubValues((prevSubValues) => {
+        return { ...prevSubValues, [key]: data };
       });
-      const showFullLabel = hoveredItem === label;
-      const hideShortLabel = hoveredItem !== "";
-      const onMouseEnter = () => {
-        setHoveredItem(label);
+    };
+    react.useEffect(() => {
+      if (!subValues || !model.Items || model.Items && model.Items.length == 0)
+        return;
+      let newValues = values;
+      model.Items.forEach((item) => {
+        const calculatedValue = runValueFunc(subValues, item);
+        newValues[item.Name] = calculatedValue;
+      });
+      setValues(newValues);
+    }, [subValues, model.Items]);
+    react.useEffect(() => {
+      let subscriptions = [];
+      if (model.Items && model.Items.length > 0) {
+        model.Items.forEach((item) => {
+          item.ValueSubscriptions.forEach((sub) => {
+            const updateEvent = `${sub}.update`;
+            const subscribeEvent = `${sub}.subscribe`;
+            let engineSub = engine.on(updateEvent, (data) => {
+              if (data.current !== void 0 && data.min !== void 0 && data.max !== void 0) {
+                const percentage = (data.current - data.min) / (data.max - data.min) * 100;
+                setSubValueFunc(item, sub, percentage);
+              } else {
+                setSubValueFunc(item, sub, data);
+              }
+            });
+            subscriptions.push(engineSub);
+            engine.trigger(subscribeEvent);
+          });
+        });
+      }
+      return () => {
+        if (model.Items && model.Items.length > 0) {
+          model.Items.forEach((item) => {
+            if (item.ValueSubscriptions && item.ValueSubscriptions.length > 0) {
+              item.ValueSubscriptions.forEach((sub) => {
+                const unsubscribeEvent = `${sub}.unsubscribe`;
+                engine.trigger(unsubscribeEvent);
+              });
+            }
+          });
+        }
+        if (subscriptions && subscriptions.length > 0) {
+          subscriptions.forEach((engineSub) => {
+            engineSub.clear();
+          });
+        }
       };
-      return /* @__PURE__ */ import_react6.default.createElement($Progress, { key: label, react, customColor, icon, isReversed: "true", orientation: "horizontal", percentage: value, text: label, minValue: "50", maxValue: "100", color: "#00ff43", hideShortLabel, showFullLabel, onMouseEnter });
-    });
-    const textStyle = {
-      color: "#FFFFFF",
-      // Text color
-      fontWeight: "bold",
-      // Optional: if you want bold text
-      fontSize: "14rem",
-      textShadow: "1rem 1rem 5rem rgba(0,0,0,1)"
+    }, [model.Items, setSubValues]);
+    const renderMonitor = (windowModel, index) => {
+      return windowModel && windowModel.IsVisible ? /* @__PURE__ */ import_react6.default.createElement(monitor_window_default, { disableDrag: draggingWindow && draggingWindow !== windowModel.Name, onDragStart, onDragEnd, visible: true, key: index, windowModel, windowIndex: index, model, values, _L, subValues, trigger, update }) : null;
     };
-    const onMouseLeave = () => {
-      setHoveredItem("");
-    };
-    return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement($Panel, { title: "City", style: { maxWidth: "270rem" }, react, plugin: "citymonitor" }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexDirection: "column", marginTop: "5rem", position: "relative" }, onMouseLeave }, ...meters, combinedMeters ? combinedMeters : null)));
+    return /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, model.Windows ? model.Windows.map((windowModel, index) => renderMonitor(windowModel, index)) : null, model.ShowAddWindow ? /* @__PURE__ */ import_react6.default.createElement(add_window_default, { model, trigger, _L }) : null);
   };
-  window._$hookui.registerPanel({
-    id: "cities2modding.citymonitor",
-    name: "City Monitor",
-    icon: "Media/Game/Icons/BuildingLevel.svg",
-    component: $CityMonitor
-  });
+  window.$_gooee.register("ultimatemonitor", "UltimateMonitorWindow", ToolWindow, "main-container", "ultimatemonitor");
 })();
 /*! Bundled license information:
 

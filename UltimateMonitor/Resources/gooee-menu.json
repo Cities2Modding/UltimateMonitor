@@ -1,0 +1,16 @@
+{
+  "Icon": "solid-chart-simple",
+  "IsFAIcon": true,
+  "OnClick": "OnToggleWindow",
+  "OnClickKey": "Default",
+  "OnGetChildren": "GetGooeeMenuItems",
+  "Children": [
+    {
+      "Label": "UltimateMonitor.Menu.AddNewWindow",
+      "Icon": "solid-plus",
+      "IconClassName": "bg-success",
+      "IsFAIcon": true,
+      "OnClick": "OnToggleAddWindow"
+    }
+  ]
+}

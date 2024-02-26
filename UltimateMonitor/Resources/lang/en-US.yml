@@ -1,0 +1,122 @@
+lang:
+ UltimateMonitor.Menu.AddNewWindow: Add new window
+ UltimateMonitor.Menu.Default: Default
+   
+ UltimateMonitor.RemoveWindow: Remove window
+ UltimateMonitor.RemoveWindow_desc: Remove the current monitor window.
+ 
+ UltimateMonitor.Edit: Edit
+ UltimateMonitor.Edit_desc: Edit the monitor window.
+
+ UltimateMonitor.Done: Done
+ UltimateMonitor.Done_desc: Finish editing the monitor window.
+  
+ UltimateMonitor.MoveDown: Move monitor down
+ UltimateMonitor.MoveDown_desc: Move the monitor down the list.
+
+ UltimateMonitor.MoveUp: Move monitor up
+ UltimateMonitor.MoveUp_desc: Move the monitor up the list.
+ 
+ UltimateMonitor.Add: Add monitor
+ UltimateMonitor.Add_desc: Add the selected monitor to the list.
+
+ UltimateMonitor.Remove: Remove monitor
+ UltimateMonitor.Remove_desc: Remove the monitor from the list.
+
+ UltimateMonitor.Horizontal: Horizontal view
+ UltimateMonitor.Horizontal_desc: Show monitors as horizontal items.
+
+ UltimateMonitor.Vertical: Vertical view
+ UltimateMonitor.Vertical_desc: Show monitors as vertical items.
+
+ UltimateMonitor.Vertical.Size: Monitor height
+ UltimateMonitor.Vertical.Size_desc: Set the height of the vertical monitors.
+  
+ UltimateMonitor.Horizontal.Size: Monitor width
+ UltimateMonitor.Horizontal.Size_desc: Set the width of the horizontal monitors.
+  
+ UltimateMonitor.NoMonitors: No monitors configured
+ UltimateMonitor.NoMonitors_desc: Click this notification or the edit button (pencil icon) to edit.
+  
+ UltimateMonitor.NoMonitorsEdit: Edit mode enabled
+ UltimateMonitor.NoMonitorsEdit_desc: Select a monitor from the dropdown and then click the add button (plus icon).
+ 
+ UltimateMonitor.Monitor.Electricity: Electricity
+ UltimateMonitor.Monitor.Electricity_desc: The percentage of electricity availability.
+
+ UltimateMonitor.Monitor.Water: Water
+ UltimateMonitor.Monitor.Water_desc: The percentage of water availability.
+
+ UltimateMonitor.Monitor.Sewage: Sewage
+ UltimateMonitor.Monitor.Sewage_desc: The percentage of sewage availability.
+
+ UltimateMonitor.Monitor.Garbage: Garbage
+ UltimateMonitor.Monitor.Garbage_desc: The percentage of garbage processing availability.
+
+ UltimateMonitor.Monitor.FireHazard: Fire Hazard
+ UltimateMonitor.Monitor.FireHazard_desc: The perecentage risk of fires.
+
+ UltimateMonitor.Monitor.CrimeRate: Crime Rate
+ UltimateMonitor.Monitor.CrimeRate_desc: The average crime probability.
+
+ UltimateMonitor.Monitor.TrafficFlow: Traffic
+ UltimateMonitor.Monitor.TrafficFlow_desc: The average traffic flow.
+
+ UltimateMonitor.Monitor.ParkingAvailability: Parking
+ UltimateMonitor.Monitor.ParkingAvailability_desc: The percentage of parking availbility.
+
+ UltimateMonitor.Monitor.Unemployment: Unemployment
+ UltimateMonitor.Monitor.Unemployment_desc: The total percentage of unemployment.
+
+ UltimateMonitor.Monitor.UnemploymentUneducated: Unemployment (Uneducated)
+ UltimateMonitor.Monitor.UnemploymentUneducated_desc: The percentage of unemployment for uneducated people.
+
+ UltimateMonitor.Monitor.UnemploymentPoorlyEducated: Unemployment (Poorly Educated)
+ UltimateMonitor.Monitor.UnemploymentPoorlyEducated_desc: The percentage of unemployment for poorly educated people.
+
+ UltimateMonitor.Monitor.UnemploymentEducated: Unemployment (Educated)
+ UltimateMonitor.Monitor.UnemploymentEducated_desc: The percentage of unemployment for educated people.
+
+ UltimateMonitor.Monitor.UnemploymentWellEducated: Unemployment (Well Educated)
+ UltimateMonitor.Monitor.UnemploymentWellEducated_desc: The percentage of unemployment for well educated people.
+
+ UltimateMonitor.Monitor.UnemploymentHighlyEducated: Unemployment (Highly Educated)
+ UltimateMonitor.Monitor.UnemploymentHighlyEducated_desc: The percentage of unemployment for highly educated people.
+
+ UltimateMonitor.Monitor.HealthcareEfficiency: Healthcare
+ UltimateMonitor.Monitor.HealthcareEfficiency_desc: Average healthcare efficiency based on healthcare availability and the average health of people.
+
+ UltimateMonitor.Monitor.DeathcareEfficiency: Deathcare
+ UltimateMonitor.Monitor.DeathcareEfficiency_desc: Average deathcare efficiency based on deathcare and cemetary availability.
+
+ UltimateMonitor.Monitor.ImprisonmentCapacity: Prisons
+ UltimateMonitor.Monitor.ImprisonmentCapacity_desc: The average availability of jails and prisons.
+
+ UltimateMonitor.Monitor.EducationAvailability: Education
+ UltimateMonitor.Monitor.EducationAvailability_desc: The average availability off all levels of education.
+
+ UltimateMonitor.Monitor.IncomeEfficiency: Income
+ UltimateMonitor.Monitor.IncomeEfficiency_desc: Your income efficiency is a percentage representing your total income vs your total expenses.
+
+ UltimateMonitor.Monitor.MonthlyPopulationGrowth: Population growth
+ UltimateMonitor.Monitor.MonthlyPopulationGrowth_desc: The monthly population growth based on births, deaths, people moving in and out of the city.
+
+ UltimateMonitor.Monitor.AveragePollution: Pollution
+ UltimateMonitor.Monitor.AveragePollution_desc: The average total pollution which includes all types of pollution in the city.
+  
+ UltimateMonitor.Monitor.Employable: Employable
+ UltimateMonitor.Monitor.Employable_desc: The amount of people that are of working age.
+
+ UltimateMonitor.Monitor.UnderEmployed: Under-employed
+ UltimateMonitor.Monitor.UnderEmployed_desc: The amount of people that are over-qualified for the job they are in.
+
+ UltimateMonitor.Monitor.HomelessHouseholds: Homeless Households
+ UltimateMonitor.Monitor.HomelessHouseholds_desc: The amount of households that are unable to afford a home to live in.
+
+ UltimateMonitor.Monitor.Unemployed: Unemployed
+ UltimateMonitor.Monitor.Unemployed_desc: The amount of people that are able to work but have no job.
+ 
+ UltimateMonitor.Size.ExtraSmall: Extra Small
+ UltimateMonitor.Size.Small: Small
+ UltimateMonitor.Size.Medium: Medium
+ UltimateMonitor.Size.Large: Large

@@ -1,0 +1,122 @@
+lang:
+  UltimateMonitor.Menu.AddNewWindow: 新增視窗
+  UltimateMonitor.Menu.Default: 預設
+   
+  UltimateMonitor.RemoveWindow: 移除視窗
+  UltimateMonitor.RemoveWindow_desc: 移除當前監視視窗。
+ 
+  UltimateMonitor.Edit: 編輯
+  UltimateMonitor.Edit_desc: 編輯監視視窗。
+
+  UltimateMonitor.Done: 完成
+  UltimateMonitor.Done_desc: 完成編輯監視視窗。
+  
+  UltimateMonitor.MoveDown: 下移監視器
+  UltimateMonitor.MoveDown_desc: 在列表中下移監視器。
+
+  UltimateMonitor.MoveUp: 上移監視器
+  UltimateMonitor.MoveUp_desc: 在列表中上移監視器。
+ 
+  UltimateMonitor.Add: 添加監視器
+  UltimateMonitor.Add_desc: 將選中的監視器添加到列表中。
+
+  UltimateMonitor.Remove: 移除監視器
+  UltimateMonitor.Remove_desc: 從列表中移除監視器。
+
+  UltimateMonitor.Horizontal: 水平視圖
+  UltimateMonitor.Horizontal_desc: 以水平項目顯示監視器。
+
+  UltimateMonitor.Vertical: 垂直視圖
+  UltimateMonitor.Vertical_desc: 以垂直項目顯示監視器。
+
+  UltimateMonitor.Vertical.Size: 監視器高度
+  UltimateMonitor.Vertical.Size_desc: 設定垂直監視器的高度。
+  
+  UltimateMonitor.Horizontal.Size: 監視器寬度
+  UltimateMonitor.Horizontal.Size_desc: 設定水平監視器的寬度。
+  
+  UltimateMonitor.NoMonitors: 無監視器配置
+  UltimateMonitor.NoMonitors_desc: 點擊此通知或編輯按鈕（鉛筆圖標）進行編輯。
+  
+  UltimateMonitor.NoMonitorsEdit: 啟用編輯模式
+  UltimateMonitor.NoMonitorsEdit_desc: 從下拉菜單選擇一個監視器，然後點擊添加按鈕（加號圖標）。
+ 
+  UltimateMonitor.Monitor.Electricity: 電力
+  UltimateMonitor.Monitor.Electricity_desc: 電力可用性的百分比。
+
+  UltimateMonitor.Monitor.Water: 水資源
+  UltimateMonitor.Monitor.Water_desc: 水資源可用性的百分比。
+
+  UltimateMonitor.Monitor.Sewage: 污水
+  UltimateMonitor.Monitor.Sewage_desc: 污水處理的可用性百分比。
+
+  UltimateMonitor.Monitor.Garbage: 垃圾
+  UltimateMonitor.Monitor.Garbage_desc: 垃圾處理的可用性百分比。
+
+  UltimateMonitor.Monitor.FireHazard: 火災風險
+  UltimateMonitor.Monitor.FireHazard_desc: 火災風險的百分比。
+
+  UltimateMonitor.Monitor.CrimeRate: 犯罪率
+  UltimateMonitor.Monitor.CrimeRate_desc: 犯罪可能性的平均值。
+
+  UltimateMonitor.Monitor.TrafficFlow: 交通流量
+  UltimateMonitor.Monitor.TrafficFlow_desc: 交通流量的平均值。
+
+  UltimateMonitor.Monitor.ParkingAvailability: 停車可用性
+  UltimateMonitor.Monitor.ParkingAvailability_desc: 停車位可用性的百分比。
+
+  UltimateMonitor.Monitor.Unemployment: 失業率
+  UltimateMonitor.Monitor.Unemployment_desc: 總失業率的百分比。
+
+  UltimateMonitor.Monitor.UnemploymentUneducated: 未受教育者失業率
+  UltimateMonitor.Monitor.UnemploymentUneducated_desc: 未受教育者的失業百分比。
+
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated: 教育程度較低者失業率
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated_desc: 教育程度較低者的失業百分比。
+
+  UltimateMonitor.Monitor.UnemploymentEducated: 受過教育者失業率
+  UltimateMonitor.Monitor.UnemploymentEducated_desc: 受過教育者的失業百分比。
+
+  UltimateMonitor.Monitor.UnemploymentWellEducated: 教育程度較高者失業率
+  UltimateMonitor.Monitor.UnemploymentWellEducated_desc: 教育程度較高者的失業百分比。
+
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated: 高等教育者失業率
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated_desc: 高等教育者的失業百分比。
+
+  UltimateMonitor.Monitor.HealthcareEfficiency: 醫療保健
+  UltimateMonitor.Monitor.HealthcareEfficiency_desc: 基於醫療可用性及人群平均健康狀態的醫療效率平均值。
+
+  UltimateMonitor.Monitor.DeathcareEfficiency: 喪葬服務
+  UltimateMonitor.Monitor.DeathcareEfficiency_desc: 基於喪葬服務及墓地可用性的喪葬效率平均值。
+
+  UltimateMonitor.Monitor.ImprisonmentCapacity: 監獄
+  UltimateMonitor.Monitor.ImprisonmentCapacity_desc: 監獄及監禁設施的平均可用性。
+
+  UltimateMonitor.Monitor.EducationAvailability: 教育
+  UltimateMonitor.Monitor.EducationAvailability_desc: 所有教育層次的平均可用性。
+
+  UltimateMonitor.Monitor.IncomeEfficiency: 收入效率
+  UltimateMonitor.Monitor.IncomeEfficiency_desc: 表示您的總收入與總支出比例的收入效率百分比。
+
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth: 人口增長
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth_desc: 基於出生、死亡及城市內外遷移的月度人口增長。
+
+  UltimateMonitor.Monitor.AveragePollution: 污染
+  UltimateMonitor.Monitor.AveragePollution_desc: 包括城市中所有類型污染的平均總污染。
+  
+  UltimateMonitor.Monitor.Employable: 就業人口
+  UltimateMonitor.Monitor.Employable_desc: 處於工作年齡的人口數量。
+
+  UltimateMonitor.Monitor.UnderEmployed: 技能過剩人口
+  UltimateMonitor.Monitor.UnderEmployed_desc: 對於其工作來說過於資深的人員數量。
+
+  UltimateMonitor.Monitor.HomelessHouseholds: 無家可歸的家庭
+  UltimateMonitor.Monitor.HomelessHouseholds_desc: 無法負擔住宅的家庭數量。
+
+  UltimateMonitor.Monitor.Unemployed: 失業人員
+  UltimateMonitor.Monitor.Unemployed_desc: 能夠工作但沒有工作的人數。
+
+  UltimateMonitor.Size.ExtraSmall: 特小
+  UltimateMonitor.Size.Small: 小
+  UltimateMonitor.Size.Medium: 中
+  UltimateMonitor.Size.Large: 大

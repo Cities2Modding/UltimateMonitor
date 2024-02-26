@@ -19,7 +19,30 @@
 	    <Cities2_Location>G:\SteamLibrary\steamapps\common\Cities Skylines II</Cities2_Location>
 	    <UnstrippedUnity_Location>G:\SteamLibrary\steamapps\common\Cities Skylines II\unstripped</UnstrippedUnity_Location>
 	    <BepInExVersion>5</BepInExVersion>
-    </PropertyGroup>	
+	    <Title>Ultimate Monitor</Title>
+	    <Copyright>Cities2Modding</Copyright>
+	    <Authors>Cities2Modding</Authors>
+	    <FileVersion>1.2.0.0</FileVersion>
+	    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+		<Version>1.2.0.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\changelog.md" />
+      <None Remove="Resources\gooee-menu.json" />
+      <None Remove="Resources\lang\de-DE.yml" />
+      <None Remove="Resources\lang\en-US.yml" />
+      <None Remove="Resources\lang\es-ES.yml" />
+      <None Remove="Resources\lang\fr-FR.yml" />
+      <None Remove="Resources\lang\it-IT.yml" />
+      <None Remove="Resources\lang\ja-JP.yml" />
+      <None Remove="Resources\lang\ko-KR.yml" />
+      <None Remove="Resources\lang\pl-PL.yml" />
+      <None Remove="Resources\lang\pt-BR.yml" />
+      <None Remove="Resources\lang\ru-RU.yml" />
+      <None Remove="Resources\lang\zh-HANS.yml" />
+      <None Remove="Resources\lang\zh-HANT.yml" />
+    </ItemGroup>	
 
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
@@ -28,6 +51,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\changelog.md" />
+    <EmbeddedResource Include="Resources\gooee-menu.json" />
+    <EmbeddedResource Include="Resources\lang\de-DE.yml" />
+    <EmbeddedResource Include="Resources\lang\en-US.yml" />
+    <EmbeddedResource Include="Resources\lang\es-ES.yml" />
+    <EmbeddedResource Include="Resources\lang\fr-FR.yml" />
+    <EmbeddedResource Include="Resources\lang\it-IT.yml" />
+    <EmbeddedResource Include="Resources\lang\ja-JP.yml" />
+    <EmbeddedResource Include="Resources\lang\ko-KR.yml" />
+    <EmbeddedResource Include="Resources\lang\pl-PL.yml" />
+    <EmbeddedResource Include="Resources\lang\pt-BR.yml" />
+    <EmbeddedResource Include="Resources\lang\ru-RU.yml" />
+    <EmbeddedResource Include="Resources\lang\zh-HANS.yml" />
+    <EmbeddedResource Include="Resources\lang\zh-HANT.yml" />
     <EmbeddedResource Include="Resources\ui.js" />
   </ItemGroup>
   
@@ -70,6 +107,10 @@
 		</Reference>
 		<Reference Include="Colossal.Localization">
 			<HintPath>$(Cities2_Location)\Cities2_Data\Managed\Colossal.Localization.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Gooee">
+			<HintPath>$(Cities2_Location)\BepInEx\plugins\Gooee\Gooee.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="Colossal.Logging">
@@ -154,10 +195,6 @@
 		</Reference>
 		<Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
 			<HintPath>$(Cities2_Location)\Cities2_Data\Managed\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="HookUILib">
-			<HintPath>$(Cities2_Location)\BepInEx\plugins\HookUI\HookUILib.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="Cohtml.RenderingBackend">

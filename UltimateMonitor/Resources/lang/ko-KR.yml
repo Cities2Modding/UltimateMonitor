@@ -1,0 +1,122 @@
+lang:
+  UltimateMonitor.Menu.AddNewWindow: 새 창 추가
+  UltimateMonitor.Menu.Default: 기본값
+   
+  UltimateMonitor.RemoveWindow: 창 제거
+  UltimateMonitor.RemoveWindow_desc: 현재 모니터 창 제거.
+ 
+  UltimateMonitor.Edit: 편집
+  UltimateMonitor.Edit_desc: 모니터 창 편집.
+
+  UltimateMonitor.Done: 완료
+  UltimateMonitor.Done_desc: 모니터 창 편집 완료.
+  
+  UltimateMonitor.MoveDown: 모니터 아래로 이동
+  UltimateMonitor.MoveDown_desc: 목록에서 모니터를 아래로 이동.
+
+  UltimateMonitor.MoveUp: 모니터 위로 이동
+  UltimateMonitor.MoveUp_desc: 목록에서 모니터를 위로 이동.
+ 
+  UltimateMonitor.Add: 모니터 추가
+  UltimateMonitor.Add_desc: 선택한 모니터를 목록에 추가.
+
+  UltimateMonitor.Remove: 모니터 제거
+  UltimateMonitor.Remove_desc: 목록에서 모니터 제거.
+
+  UltimateMonitor.Horizontal: 가로 보기
+  UltimateMonitor.Horizontal_desc: 모니터를 가로 항목으로 표시.
+
+  UltimateMonitor.Vertical: 세로 보기
+  UltimateMonitor.Vertical_desc: 모니터를 세로 항목으로 표시.
+
+  UltimateMonitor.Vertical.Size: 모니터 높이
+  UltimateMonitor.Vertical.Size_desc: 세로 모니터의 높이 설정.
+  
+  UltimateMonitor.Horizontal.Size: 모니터 너비
+  UltimateMonitor.Horizontal.Size_desc: 가로 모니터의 너비 설정.
+  
+  UltimateMonitor.NoMonitors: 모니터 미설정
+  UltimateMonitor.NoMonitors_desc: 이 알림을 클릭하거나 편집 버튼(연필 아이콘)을 클릭하여 편집.
+  
+  UltimateMonitor.NoMonitorsEdit: 편집 모드 활성화
+  UltimateMonitor.NoMonitorsEdit_desc: 드롭다운에서 모니터를 선택한 후 추가 버튼(플러스 아이콘)을 클릭.
+ 
+  UltimateMonitor.Monitor.Electricity: 전기
+  UltimateMonitor.Monitor.Electricity_desc: 전기 공급 비율.
+
+  UltimateMonitor.Monitor.Water: 물
+  UltimateMonitor.Monitor.Water_desc: 수도 공급 비율.
+
+  UltimateMonitor.Monitor.Sewage: 하수
+  UltimateMonitor.Monitor.Sewage_desc: 하수 처리 비율.
+
+  UltimateMonitor.Monitor.Garbage: 쓰레기
+  UltimateMonitor.Monitor.Garbage_desc: 쓰레기 처리 비율.
+
+  UltimateMonitor.Monitor.FireHazard: 화재 위험
+  UltimateMonitor.Monitor.FireHazard_desc: 화재 위험 비율.
+
+  UltimateMonitor.Monitor.CrimeRate: 범죄율
+  UltimateMonitor.Monitor.CrimeRate_desc: 평균 범죄 발생 확률.
+
+  UltimateMonitor.Monitor.TrafficFlow: 교통 흐름
+  UltimateMonitor.Monitor.TrafficFlow_desc: 평균 교통 흐름.
+
+  UltimateMonitor.Monitor.ParkingAvailability: 주차 가능성
+  UltimateMonitor.Monitor.ParkingAvailability_desc: 주차 공간 비율.
+
+  UltimateMonitor.Monitor.Unemployment: 실업률
+  UltimateMonitor.Monitor.Unemployment_desc: 전체 실업률 비율.
+
+  UltimateMonitor.Monitor.UnemploymentUneducated: 실업률(미교육)
+  UltimateMonitor.Monitor.UnemploymentUneducated_desc: 교육을 받지 않은 사람들의 실업률.
+
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated: 실업률(저학력)
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated_desc: 학력이 낮은 사람들의 실업률.
+
+  UltimateMonitor.Monitor.UnemploymentEducated: 실업률(교육받음)
+  UltimateMonitor.Monitor.UnemploymentEducated_desc: 교육을 받은 사람들의 실업률.
+
+  UltimateMonitor.Monitor.UnemploymentWellEducated: 실업률(고학력)
+  UltimateMonitor.Monitor.UnemploymentWellEducated_desc: 높은 학력을 가진 사람들의 실업률.
+
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated: 실업률(대학원 이상)
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated_desc: 고등 교육을 받은 사람들의 실업률.
+
+  UltimateMonitor.Monitor.HealthcareEfficiency: 보건 의료
+  UltimateMonitor.Monitor.HealthcareEfficiency_desc: 의료 서비스 이용 가능성 및 평균 건강 상태에 기반한 평균 의료 효율.
+
+  UltimateMonitor.Monitor.DeathcareEfficiency: 장례 처리 효율
+  UltimateMonitor.Monitor.DeathcareEfficiency_desc: 장례 서비스 및 묘지 이용 가능성에 기반한 평균 장례 처리 효율.
+
+  UltimateMonitor.Monitor.ImprisonmentCapacity: 교도소
+  UltimateMonitor.Monitor.ImprisonmentCapacity_desc: 평균 교도소 및 감옥 이용 가능성.
+
+  UltimateMonitor.Monitor.EducationAvailability: 교육 이용 가능성
+  UltimateMonitor.Monitor.EducationAvailability_desc: 모든 교육 수준의 평균 이용 가능성.
+
+  UltimateMonitor.Monitor.IncomeEfficiency: 소득 효율
+  UltimateMonitor.Monitor.IncomeEfficiency_desc: 총 수입 대비 총 지출을 나타내는 비율의 소득 효율.
+
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth: 인구 증가
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth_desc: 출생, 사망, 도시 내외 이동을 기반으로 한 월간 인구 증가.
+
+  UltimateMonitor.Monitor.AveragePollution: 평균 오염
+  UltimateMonitor.Monitor.AveragePollution_desc: 도시 내 모든 유형의 오염을 포함한 평균 총 오염.
+
+  UltimateMonitor.Monitor.Employable: 취업 가능 인구
+  UltimateMonitor.Monitor.Employable_desc: 근로 연령의 인구 수.
+
+  UltimateMonitor.Monitor.UnderEmployed: 업무 과잉 자격 인구
+  UltimateMonitor.Monitor.UnderEmployed_desc: 자격이 과한 일을 하는 사람들의 수.
+
+  UltimateMonitor.Monitor.HomelessHouseholds: 무주택 가구
+  UltimateMonitor.Monitor.HomelessHouseholds_desc: 주택을 구할 수 없는 가구 수.
+
+  UltimateMonitor.Monitor.Unemployed: 실업자
+  UltimateMonitor.Monitor.Unemployed_desc: 일할 수 있지만 일자리가 없는 사람들의 수.
+
+  UltimateMonitor.Size.ExtraSmall: 매우 작음
+  UltimateMonitor.Size.Small: 작음
+  UltimateMonitor.Size.Medium: 중간
+  UltimateMonitor.Size.Large: 큼

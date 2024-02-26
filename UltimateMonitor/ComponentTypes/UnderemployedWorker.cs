@@ -1,7 +1,4 @@
 ﻿using Colossal.Serialization.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Unity.Entities;
 
 namespace UltimateMonitor.ComponentTypes

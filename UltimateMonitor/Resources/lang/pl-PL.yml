@@ -1,0 +1,122 @@
+lang:
+  UltimateMonitor.Menu.AddNewWindow: Dodaj nowe okno
+  UltimateMonitor.Menu.Default: Domyślne
+   
+  UltimateMonitor.RemoveWindow: Usuń okno
+  UltimateMonitor.RemoveWindow_desc: Usuń bieżące okno monitora.
+ 
+  UltimateMonitor.Edit: Edytuj
+  UltimateMonitor.Edit_desc: Edytuj okno monitora.
+
+  UltimateMonitor.Done: Gotowe
+  UltimateMonitor.Done_desc: Zakończ edycję okna monitora.
+  
+  UltimateMonitor.MoveDown: Przenieś monitor w dół
+  UltimateMonitor.MoveDown_desc: Przesuń monitor w dół listy.
+
+  UltimateMonitor.MoveUp: Przenieś monitor w górę
+  UltimateMonitor.MoveUp_desc: Przesuń monitor w górę listy.
+ 
+  UltimateMonitor.Add: Dodaj monitor
+  UltimateMonitor.Add_desc: Dodaj wybrany monitor do listy.
+
+  UltimateMonitor.Remove: Usuń monitor
+  UltimateMonitor.Remove_desc: Usuń monitor z listy.
+
+  UltimateMonitor.Horizontal: Widok poziomy
+  UltimateMonitor.Horizontal_desc: Pokaż monitory jako elementy poziome.
+
+  UltimateMonitor.Vertical: Widok pionowy
+  UltimateMonitor.Vertical_desc: Pokaż monitory jako elementy pionowe.
+
+  UltimateMonitor.Vertical.Size: Wysokość monitora
+  UltimateMonitor.Vertical.Size_desc: Ustaw wysokość monitorów pionowych.
+  
+  UltimateMonitor.Horizontal.Size: Szerokość monitora
+  UltimateMonitor.Horizontal.Size_desc: Ustaw szerokość monitorów poziomych.
+  
+  UltimateMonitor.NoMonitors: Brak skonfigurowanych monitorów
+  UltimateMonitor.NoMonitors_desc: Kliknij to powiadomienie lub przycisk edycji (ikona ołówka), aby edytować.
+  
+  UltimateMonitor.NoMonitorsEdit: Włączony tryb edycji
+  UltimateMonitor.NoMonitorsEdit_desc: Wybierz monitor z rozwijanego menu, a następnie kliknij przycisk dodawania (ikona plusa).
+ 
+  UltimateMonitor.Monitor.Electricity: Elektryczność
+  UltimateMonitor.Monitor.Electricity_desc: Procent dostępności elektryczności.
+
+  UltimateMonitor.Monitor.Water: Woda
+  UltimateMonitor.Monitor.Water_desc: Procent dostępności wody.
+
+  UltimateMonitor.Monitor.Sewage: Ścieki
+  UltimateMonitor.Monitor.Sewage_desc: Procent dostępności kanalizacji.
+
+  UltimateMonitor.Monitor.Garbage: Śmieci
+  UltimateMonitor.Monitor.Garbage_desc: Procent dostępności przetwarzania śmieci.
+
+  UltimateMonitor.Monitor.FireHazard: Zagrożenie pożarem
+  UltimateMonitor.Monitor.FireHazard_desc: Procentowe ryzyko pożaru.
+
+  UltimateMonitor.Monitor.CrimeRate: Wskaźnik przestępczości
+  UltimateMonitor.Monitor.CrimeRate_desc: Średnie prawdopodobieństwo przestępstwa.
+
+  UltimateMonitor.Monitor.TrafficFlow: Przepływ ruchu
+  UltimateMonitor.Monitor.TrafficFlow_desc: Średni przepływ ruchu.
+
+  UltimateMonitor.Monitor.ParkingAvailability: Dostępność parkingów
+  UltimateMonitor.Monitor.ParkingAvailability_desc: Procent dostępności parkingów.
+
+  UltimateMonitor.Monitor.Unemployment: Bezrobocie
+  UltimateMonitor.Monitor.Unemployment_desc: Całkowity procent bezrobocia.
+
+  UltimateMonitor.Monitor.UnemploymentUneducated: Bezrobocie (niewykształceni)
+  UltimateMonitor.Monitor.UnemploymentUneducated_desc: Procent bezrobocia wśród osób niewykształconych.
+
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated: Bezrobocie (słabo wykształceni)
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated_desc: Procent bezrobocia wśród osób słabo wykształconych.
+
+  UltimateMonitor.Monitor.UnemploymentEducated: Bezrobocie (wykształceni)
+  UltimateMonitor.Monitor.UnemploymentEducated_desc: Procent bezrobocia wśród osób wykształconych.
+
+  UltimateMonitor.Monitor.UnemploymentWellEducated: Bezrobocie (dobrze wykształceni)
+  UltimateMonitor.Monitor.UnemploymentWellEducated_desc: Procent bezrobocia wśród osób dobrze wykształconych.
+
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated: Bezrobocie (wysoce wykształceni)
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated_desc: Procent bezrobocia wśród osób wysoce wykształconych.
+
+  UltimateMonitor.Monitor.HealthcareEfficiency: Opieka zdrowotna
+  UltimateMonitor.Monitor.HealthcareEfficiency_desc: Średnia efektywność opieki zdrowotnej na podstawie dostępności i średniego stanu zdrowia ludzi.
+
+  UltimateMonitor.Monitor.DeathcareEfficiency: Opieka pogrzebowa
+  UltimateMonitor.Monitor.DeathcareEfficiency_desc: Średnia efektywność usług pogrzebowych na podstawie dostępności usług i cmentarzy.
+
+  UltimateMonitor.Monitor.ImprisonmentCapacity: Więzienia
+  UltimateMonitor.Monitor.ImprisonmentCapacity_desc: Średnia dostępność więzień i aresztów.
+
+  UltimateMonitor.Monitor.EducationAvailability: Dostępność edukacji
+  UltimateMonitor.Monitor.EducationAvailability_desc: Średnia dostępność wszystkich poziomów edukacji.
+
+  UltimateMonitor.Monitor.IncomeEfficiency: Efektywność dochodu
+  UltimateMonitor.Monitor.IncomeEfficiency_desc: Twoja efektywność dochodu jako procent przedstawiający całkowity dochód w stosunku do całkowitych wydatków.
+
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth: Wzrost populacji
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth_desc: Miesięczny wzrost populacji na podstawie urodzeń, zgonów i migracji do i z miasta.
+
+  UltimateMonitor.Monitor.AveragePollution: Zanieczyszczenie
+  UltimateMonitor.Monitor.AveragePollution_desc: Średnie całkowite zanieczyszczenie obejmujące wszystkie typy zanieczyszczeń w mieście.
+  
+  UltimateMonitor.Monitor.Employable: Zatrudnialni
+  UltimateMonitor.Monitor.Employable_desc: Ilość osób w wieku produkcyjnym.
+
+  UltimateMonitor.Monitor.UnderEmployed: Nadkwalifikowani
+  UltimateMonitor.Monitor.UnderEmployed_desc: Ilość osób nadkwalifikowanych do wykonywanej pracy.
+
+  UltimateMonitor.Monitor.HomelessHouseholds: Bezdomne gospodarstwa
+  UltimateMonitor.Monitor.HomelessHouseholds_desc: Ilość gospodarstw domowych niezdolnych do zapewnienia sobie mieszkania.
+
+  UltimateMonitor.Monitor.Unemployed: Bezrobotni
+  UltimateMonitor.Monitor.Unemployed_desc: Ilość osób zdolnych do pracy, ale bez zatrudnienia.
+
+  UltimateMonitor.Size.ExtraSmall: Bardzo Mały
+  UltimateMonitor.Size.Small: Mały
+  UltimateMonitor.Size.Medium: Średni
+  UltimateMonitor.Size.Large: Duży

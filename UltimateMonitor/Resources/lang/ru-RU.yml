@@ -1,0 +1,122 @@
+lang:
+  UltimateMonitor.Menu.AddNewWindow: Добавить новое окно
+  UltimateMonitor.Menu.Default: По умолчанию
+   
+  UltimateMonitor.RemoveWindow: Удалить окно
+  UltimateMonitor.RemoveWindow_desc: Удалить текущее окно монитора.
+ 
+  UltimateMonitor.Edit: Редактировать
+  UltimateMonitor.Edit_desc: Редактировать окно монитора.
+
+  UltimateMonitor.Done: Готово
+  UltimateMonitor.Done_desc: Завершить редактирование окна монитора.
+  
+  UltimateMonitor.MoveDown: Переместить монитор вниз
+  UltimateMonitor.MoveDown_desc: Переместить монитор вниз по списку.
+
+  UltimateMonitor.MoveUp: Переместить монитор вверх
+  UltimateMonitor.MoveUp_desc: Переместить монитор вверх по списку.
+ 
+  UltimateMonitor.Add: Добавить монитор
+  UltimateMonitor.Add_desc: Добавить выбранный монитор в список.
+
+  UltimateMonitor.Remove: Удалить монитор
+  UltimateMonitor.Remove_desc: Удалить монитор из списка.
+
+  UltimateMonitor.Horizontal: Горизонтальный вид
+  UltimateMonitor.Horizontal_desc: Показать мониторы в горизонтальном виде.
+
+  UltimateMonitor.Vertical: Вертикальный вид
+  UltimateMonitor.Vertical_desc: Показать мониторы в вертикальном виде.
+
+  UltimateMonitor.Vertical.Size: Высота монитора
+  UltimateMonitor.Vertical.Size_desc: Установить высоту вертикальных мониторов.
+  
+  UltimateMonitor.Horizontal.Size: Ширина монитора
+  UltimateMonitor.Horizontal.Size_desc: Установить ширину горизонтальных мониторов.
+  
+  UltimateMonitor.NoMonitors: Мониторы не настроены
+  UltimateMonitor.NoMonitors_desc: Нажмите на это уведомление или кнопку редактирования (иконка карандаша) для редактирования.
+  
+  UltimateMonitor.NoMonitorsEdit: Режим редактирования включен
+  UltimateMonitor.NoMonitorsEdit_desc: Выберите монитор из выпадающего списка, затем нажмите кнопку добавления (иконка плюса).
+ 
+  UltimateMonitor.Monitor.Electricity: Электричество
+  UltimateMonitor.Monitor.Electricity_desc: Процент доступности электричества.
+
+  UltimateMonitor.Monitor.Water: Вода
+  UltimateMonitor.Monitor.Water_desc: Процент доступности воды.
+
+  UltimateMonitor.Monitor.Sewage: Канализация
+  UltimateMonitor.Monitor.Sewage_desc: Процент доступности канализации.
+
+  UltimateMonitor.Monitor.Garbage: Мусор
+  UltimateMonitor.Monitor.Garbage_desc: Процент доступности обработки мусора.
+
+  UltimateMonitor.Monitor.FireHazard: Опасность пожара
+  UltimateMonitor.Monitor.FireHazard_desc: Процентный риск возгорания.
+
+  UltimateMonitor.Monitor.CrimeRate: Уровень преступности
+  UltimateMonitor.Monitor.CrimeRate_desc: Средняя вероятность преступления.
+
+  UltimateMonitor.Monitor.TrafficFlow: Трафик
+  UltimateMonitor.Monitor.TrafficFlow_desc: Средний поток трафика.
+
+  UltimateMonitor.Monitor.ParkingAvailability: Доступность парковки
+  UltimateMonitor.Monitor.ParkingAvailability_desc: Процент доступности парковок.
+
+  UltimateMonitor.Monitor.Unemployment: Безработица
+  UltimateMonitor.Monitor.Unemployment_desc: Общий процент безработицы.
+
+  UltimateMonitor.Monitor.UnemploymentUneducated: Безработица (без образования)
+  UltimateMonitor.Monitor.UnemploymentUneducated_desc: Процент безработицы среди необразованных.
+
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated: Безработица (слабо образованные)
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated_desc: Процент безработицы среди слабо образованных.
+
+  UltimateMonitor.Monitor.UnemploymentEducated: Безработица (образованные)
+  UltimateMonitor.Monitor.UnemploymentEducated_desc: Процент безработицы среди образованных.
+
+  UltimateMonitor.Monitor.UnemploymentWellEducated: Безработица (хорошо образованные)
+  UltimateMonitor.Monitor.UnemploymentWellEducated_desc: Процент безработицы среди хорошо образованных.
+
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated: Безработица (высокообразованные)
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated_desc: Процент безработицы среди высокообразованных.
+
+  UltimateMonitor.Monitor.HealthcareEfficiency: Здравоохранение
+  UltimateMonitor.Monitor.HealthcareEfficiency_desc: Средняя эффективность здравоохранения на основе доступности и среднего состояния здоровья населения.
+
+  UltimateMonitor.Monitor.DeathcareEfficiency: Похоронные услуги
+  UltimateMonitor.Monitor.DeathcareEfficiency_desc: Средняя эффективность похоронных услуг на основе доступности и кладбищ.
+
+  UltimateMonitor.Monitor.ImprisonmentCapacity: Тюрьмы
+  UltimateMonitor.Monitor.ImprisonmentCapacity_desc: Средняя доступность тюрем и тюремных мест.
+
+  UltimateMonitor.Monitor.EducationAvailability: Образование
+  UltimateMonitor.Monitor.EducationAvailability_desc: Средняя доступность всех уровней образования.
+
+  UltimateMonitor.Monitor.IncomeEfficiency: Доход
+  UltimateMonitor.Monitor.IncomeEfficiency_desc: Ваша эффективность дохода в процентах, представляющая ваш общий доход по сравнению с общими расходами.
+
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth: Рост населения
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth_desc: Месячный рост населения на основе рождаемости, смертности и миграции.
+
+  UltimateMonitor.Monitor.AveragePollution: Загрязнение
+  UltimateMonitor.Monitor.AveragePollution_desc: Среднее общее загрязнение, включая все типы загрязнений в городе.
+  
+  UltimateMonitor.Monitor.Employable: Трудоспособные
+  UltimateMonitor.Monitor.Employable_desc: Количество людей трудоспособного возраста.
+
+  UltimateMonitor.Monitor.UnderEmployed: Переквалифицированные
+  UltimateMonitor.Monitor.UnderEmployed_desc: Количество людей, переквалифицированных для своей работы.
+
+  UltimateMonitor.Monitor.HomelessHouseholds: Бездомные домохозяйства
+  UltimateMonitor.Monitor.HomelessHouseholds_desc: Количество домохозяйств, не способных позволить себе жилье.
+
+  UltimateMonitor.Monitor.Unemployed: Безработные
+  UltimateMonitor.Monitor.Unemployed_desc: Количество людей, способных работать, но не имеющих работы.
+
+  UltimateMonitor.Size.ExtraSmall: Очень Маленький
+  UltimateMonitor.Size.Small: Маленький
+  UltimateMonitor.Size.Medium: Средний
+  UltimateMonitor.Size.Large: Большой

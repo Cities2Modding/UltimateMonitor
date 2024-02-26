@@ -14,7 +14,8 @@
     "gulp": "^4.0.2",
     "path": "^0.12.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "reactjs-id": "^1.0.6"
   },
   "dependencies": {
     "hookui-framework": "github:captain-of-coit/hookui-framework"

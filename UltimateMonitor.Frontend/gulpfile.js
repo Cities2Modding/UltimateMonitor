@@ -17,16 +17,11 @@ gulp.task('build-jsx', function (done) {
         }
         // Add other esbuild options as needed
     }).then(() => {
-        // After successful build, copy the file to the target directory
+        const localLowPath = path.join(process.env.USERPROFILE, "AppData", "LocalLow");
+        const localLowDestPath = path.join(localLowPath, "Colossal Order", "Cities Skylines II", "Mods", "Gooee", "Plugins");
+        const jsFile = path.join(localLowDestPath, "UltimateMonitor.js");
+        fs.copySync("../UltimateMonitor/Resources/ui.js", jsFile, { overwrite: true });
 
-        //const localLowPath = path.join(process.env.USERPROFILE, 'AppData', 'LocalLow');
-        //const localLowDestPath = path.join(localLowPath, 'Colossal Order', 'Cities Skylines II', 'Mods', 'HookUI', 'Extensions', 'cities2modding.unemploymentmonitor.js');
-
-        //fs.copySync('../UnemploymentMonitor/Resources/ui.js', localLowDestPath, { overwrite: true });
-        fs.copySync(
-            '../UltimateMonitor/Resources/ui.js',
-            'G:/SteamLibrary/steamapps/common/Cities Skylines II/Cities2_Data/StreamingAssets/~UI~/HookUI/Extensions/panel.cities2modding.ultimatemonitor.js'
-        );
         done();
     }).catch((error) => {
         console.error(error);

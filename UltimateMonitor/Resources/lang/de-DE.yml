@@ -1,0 +1,122 @@
+lang:
+  UltimateMonitor.Menu.AddNewWindow: Neues Fenster hinzufügen
+  UltimateMonitor.Menu.Default: Standard
+  
+  UltimateMonitor.RemoveWindow: Fenster entfernen
+  UltimateMonitor.RemoveWindow_desc: Das aktuelle Überwachungsfenster entfernen.
+  
+  UltimateMonitor.Edit: Bearbeiten
+  UltimateMonitor.Edit_desc: Das Überwachungsfenster bearbeiten.
+  
+  UltimateMonitor.Done: Fertig
+  UltimateMonitor.Done_desc: Bearbeitung des Überwachungsfensters beenden.
+  
+  UltimateMonitor.MoveDown: Monitor nach unten
+  UltimateMonitor.MoveDown_desc: Den Monitor in der Liste nach unten verschieben.
+  
+  UltimateMonitor.MoveUp: Monitor nach oben
+  UltimateMonitor.MoveUp_desc: Den Monitor in der Liste nach oben verschieben.
+  
+  UltimateMonitor.Add: Monitor hinzufügen
+  UltimateMonitor.Add_desc: Den ausgewählten Monitor zur Liste hinzufügen.
+  
+  UltimateMonitor.Remove: Monitor entfernen
+  UltimateMonitor.Remove_desc: Den Monitor aus der Liste entfernen.
+  
+  UltimateMonitor.Horizontal: Horizontale Ansicht
+  UltimateMonitor.Horizontal_desc: Monitore als horizontale Elemente anzeigen.
+  
+  UltimateMonitor.Vertical: Vertikale Ansicht
+  UltimateMonitor.Vertical_desc: Monitore als vertikale Elemente anzeigen.
+  
+  UltimateMonitor.Vertical.Size: Monitorhöhe
+  UltimateMonitor.Vertical.Size_desc: Die Höhe der vertikalen Monitore einstellen.
+  
+  UltimateMonitor.Horizontal.Size: Monitorbreite
+  UltimateMonitor.Horizontal.Size_desc: Die Breite der horizontalen Monitore einstellen.
+  
+  UltimateMonitor.NoMonitors: Keine Monitore konfiguriert
+  UltimateMonitor.NoMonitors_desc: Klicken Sie auf diese Benachrichtigung oder den Bearbeiten-Button (Bleistiftsymbol), um zu bearbeiten.
+  
+  UltimateMonitor.NoMonitorsEdit: Bearbeitungsmodus aktiviert
+  UltimateMonitor.NoMonitorsEdit_desc: Wählen Sie einen Monitor aus dem Dropdown aus und klicken Sie dann auf den Hinzufügen-Button (Plus-Symbol).
+  
+  UltimateMonitor.Monitor.Electricity: Strom
+  UltimateMonitor.Monitor.Electricity_desc: Der Prozentsatz der Stromverfügbarkeit.
+  
+  UltimateMonitor.Monitor.Water: Wasser
+  UltimateMonitor.Monitor.Water_desc: Der Prozentsatz der Wasserverfügbarkeit.
+  
+  UltimateMonitor.Monitor.Sewage: Abwasser
+  UltimateMonitor.Monitor.Sewage_desc: Der Prozentsatz der Abwasserverfügbarkeit.
+  
+  UltimateMonitor.Monitor.Garbage: Müll
+  UltimateMonitor.Monitor.Garbage_desc: Der Prozentsatz der Müllverarbeitungskapazität.
+  
+  UltimateMonitor.Monitor.FireHazard: Brandgefahr
+  UltimateMonitor.Monitor.FireHazard_desc: Das Risiko von Bränden in Prozent.
+  
+  UltimateMonitor.Monitor.CrimeRate: Kriminalitätsrate
+  UltimateMonitor.Monitor.CrimeRate_desc: Die durchschnittliche Kriminalitätswahrscheinlichkeit.
+  
+  UltimateMonitor.Monitor.TrafficFlow: Verkehr
+  UltimateMonitor.Monitor.TrafficFlow_desc: Der durchschnittliche Verkehrsfluss.
+  
+  UltimateMonitor.Monitor.ParkingAvailability: Parkplätze
+  UltimateMonitor.Monitor.ParkingAvailability_desc: Der Prozentsatz der Parkplatzverfügbarkeit.
+  
+  UltimateMonitor.Monitor.Unemployment: Arbeitslosigkeit
+  UltimateMonitor.Monitor.Unemployment_desc: Der Gesamtprozentsatz der Arbeitslosigkeit.
+  
+  UltimateMonitor.Monitor.UnemploymentUneducated: Arbeitslosigkeit (Ungebildet)
+  UltimateMonitor.Monitor.UnemploymentUneducated_desc: Der Prozentsatz der Arbeitslosigkeit bei Ungebildeten.
+  
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated: Arbeitslosigkeit (Gering Gebildet)
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated_desc: Der Prozentsatz der Arbeitslosigkeit bei gering Gebildeten.
+  
+  UltimateMonitor.Monitor.UnemploymentEducated: Arbeitslosigkeit (Gebildet)
+  UltimateMonitor.Monitor.UnemploymentEducated_desc: Der Prozentsatz der Arbeitslosigkeit bei Gebildeten.
+  
+  UltimateMonitor.Monitor.UnemploymentWellEducated: Arbeitslosigkeit (Gut Gebildet)
+  UltimateMonitor.Monitor.UnemploymentWellEducated_desc: Der Prozentsatz der Arbeitslosigkeit bei gut Gebildeten.
+  
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated: Arbeitslosigkeit (Hoch Gebildet)
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated_desc: Der Prozentsatz der Arbeitslosigkeit bei hoch Gebildeten.
+  
+  UltimateMonitor.Monitor.HealthcareEfficiency: Gesundheitsversorgung
+  UltimateMonitor.Monitor.HealthcareEfficiency_desc: Durchschnittliche Effizienz der Gesundheitsversorgung basierend auf Verfügbarkeit und durchschnittlicher Gesundheit der Bevölkerung.
+  
+  UltimateMonitor.Monitor.DeathcareEfficiency: Bestattungswesen
+  UltimateMonitor.Monitor.DeathcareEfficiency_desc: Durchschnittliche Effizienz des Bestattungswesens basierend auf Verfügbarkeit von Bestattungsdiensten und Friedhöfen.
+  
+  UltimateMonitor.Monitor.ImprisonmentCapacity: Gefängnisse
+  UltimateMonitor.Monitor.ImprisonmentCapacity_desc: Die durchschnittliche Verfügbarkeit von Gefängnissen und Haftanstalten.
+  
+  UltimateMonitor.Monitor.EducationAvailability: Bildung
+  UltimateMonitor.Monitor.EducationAvailability_desc: Die durchschnittliche Verfügbarkeit aller Bildungsstufen.
+  
+  UltimateMonitor.Monitor.IncomeEfficiency: Einkommen
+  UltimateMonitor.Monitor.IncomeEfficiency_desc: Ihre Einkommenseffizienz als Prozentsatz des Gesamteinkommens im Verhältnis zu den Gesamtausgaben.
+  
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth: Bevölkerungswachstum
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth_desc: Das monatliche Bevölkerungswachstum basierend auf Geburten, Todesfällen, Zuzügen und Wegzügen.
+  
+  UltimateMonitor.Monitor.AveragePollution: Verschmutzung
+  UltimateMonitor.Monitor.AveragePollution_desc: Die durchschnittliche Gesamtverschmutzung, die alle Verschmutzungsarten in der Stadt umfasst.
+  
+  UltimateMonitor.Monitor.Employable: Arbeitsfähige
+  UltimateMonitor.Monitor.Employable_desc: Die Anzahl der Personen im arbeitsfähigen Alter.
+  
+  UltimateMonitor.Monitor.UnderEmployed: Unterbeschäftigte
+  UltimateMonitor.Monitor.UnderEmployed_desc: Die Anzahl der Personen, die überqualifiziert für ihre Arbeit sind.
+  
+  UltimateMonitor.Monitor.HomelessHouseholds: Obdachlose Haushalte
+  UltimateMonitor.Monitor.HomelessHouseholds_desc: Die Anzahl der Haushalte, die sich kein Zuhause leisten können.
+  
+  UltimateMonitor.Monitor.Unemployed: Arbeitslose
+  UltimateMonitor.Monitor.Unemployed_desc: Die Anzahl der arbeitsfähigen Personen ohne Arbeit.
+   
+  UltimateMonitor.Size.ExtraSmall: Extra Klein
+  UltimateMonitor.Size.Small: Klein
+  UltimateMonitor.Size.Medium: Mittel
+  UltimateMonitor.Size.Large: Groß

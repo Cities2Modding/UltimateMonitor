@@ -1,0 +1,122 @@
+lang:
+  UltimateMonitor.Menu.AddNewWindow: 新しいウィンドウを追加
+  UltimateMonitor.Menu.Default: デフォルト
+   
+  UltimateMonitor.RemoveWindow: ウィンドウを削除
+  UltimateMonitor.RemoveWindow_desc: 現在のモニターウィンドウを削除します。
+ 
+  UltimateMonitor.Edit: 編集
+  UltimateMonitor.Edit_desc: モニターウィンドウを編集します。
+
+  UltimateMonitor.Done: 完了
+  UltimateMonitor.Done_desc: モニターウィンドウの編集を終了します。
+  
+  UltimateMonitor.MoveDown: モニターを下に移動
+  UltimateMonitor.MoveDown_desc: リスト内でモニターを下に移動します。
+
+  UltimateMonitor.MoveUp: モニターを上に移動
+  UltimateMonitor.MoveUp_desc: リスト内でモニターを上に移動します。
+ 
+  UltimateMonitor.Add: モニターを追加
+  UltimateMonitor.Add_desc: 選択したモニターをリストに追加します。
+
+  UltimateMonitor.Remove: モニターを削除
+  UltimateMonitor.Remove_desc: リストからモニターを削除します。
+
+  UltimateMonitor.Horizontal: 横向き表示
+  UltimateMonitor.Horizontal_desc: モニターを横向きのアイテムとして表示します。
+
+  UltimateMonitor.Vertical: 縦向き表示
+  UltimateMonitor.Vertical_desc: モニターを縦向きのアイテムとして表示します。
+
+  UltimateMonitor.Vertical.Size: モニターの高さ
+  UltimateMonitor.Vertical.Size_desc: 縦向きモニターの高さを設定します。
+  
+  UltimateMonitor.Horizontal.Size: モニターの幅
+  UltimateMonitor.Horizontal.Size_desc: 横向きモニターの幅を設定します。
+  
+  UltimateMonitor.NoMonitors: モニター未設定
+  UltimateMonitor.NoMonitors_desc: この通知または編集ボタン（鉛筆アイコン）をクリックして編集します。
+  
+  UltimateMonitor.NoMonitorsEdit: 編集モード有効
+  UltimateMonitor.NoMonitorsEdit_desc: ドロップダウンからモニターを選択し、追加ボタン（プラスアイコン）をクリックします。
+ 
+  UltimateMonitor.Monitor.Electricity: 電力
+  UltimateMonitor.Monitor.Electricity_desc: 電力供給の割合。
+
+  UltimateMonitor.Monitor.Water: 水
+  UltimateMonitor.Monitor.Water_desc: 水の供給の割合。
+
+  UltimateMonitor.Monitor.Sewage: 下水
+  UltimateMonitor.Monitor.Sewage_desc: 下水の供給の割合。
+
+  UltimateMonitor.Monitor.Garbage: ゴミ
+  UltimateMonitor.Monitor.Garbage_desc: ゴミ処理の割合。
+
+  UltimateMonitor.Monitor.FireHazard: 火災危険
+  UltimateMonitor.Monitor.FireHazard_desc: 火災のリスクの割合。
+
+  UltimateMonitor.Monitor.CrimeRate: 犯罪率
+  UltimateMonitor.Monitor.CrimeRate_desc: 平均的な犯罪発生確率。
+
+  UltimateMonitor.Monitor.TrafficFlow: 交通流
+  UltimateMonitor.Monitor.TrafficFlow_desc: 平均的な交通の流れ。
+
+  UltimateMonitor.Monitor.ParkingAvailability: 駐車場
+  UltimateMonitor.Monitor.ParkingAvailability_desc: 駐車場の利用可能割合。
+
+  UltimateMonitor.Monitor.Unemployment: 失業率
+  UltimateMonitor.Monitor.Unemployment_desc: 失業の総割合。
+
+  UltimateMonitor.Monitor.UnemploymentUneducated: 失業率（未教育）
+  UltimateMonitor.Monitor.UnemploymentUneducated_desc: 教育を受けていない人々の失業
+
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated: 教育が不十分な人々の失業率
+  UltimateMonitor.Monitor.UnemploymentPoorlyEducated_desc: 教育が不十分な人々の失業率の割合。
+
+  UltimateMonitor.Monitor.UnemploymentEducated: 教育を受けた人々の失業率
+  UltimateMonitor.Monitor.UnemploymentEducated_desc: 教育を受けた人々の失業率の割合。
+
+  UltimateMonitor.Monitor.UnemploymentWellEducated: 教育水準が高い人々の失業率
+  UltimateMonitor.Monitor.UnemploymentWellEducated_desc: 教育水準が高い人々の失業率の割合。
+
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated: 高度に教育を受けた人々の失業率
+  UltimateMonitor.Monitor.UnemploymentHighlyEducated_desc: 高度に教育を受けた人々の失業率の割合。
+
+  UltimateMonitor.Monitor.HealthcareEfficiency: ヘルスケアの効率性
+  UltimateMonitor.Monitor.HealthcareEfficiency_desc: ヘルスケアの利用可能性と人々の平均的な健康状態に基づく平均的なヘルスケアの効率性。
+
+  UltimateMonitor.Monitor.DeathcareEfficiency: 死後のケアの効率性
+  UltimateMonitor.Monitor.DeathcareEfficiency_desc: 死後のケアと墓地の利用可能性に基づく平均的な死後のケアの効率性。
+
+  UltimateMonitor.Monitor.ImprisonmentCapacity: 刑務所の容量
+  UltimateMonitor.Monitor.ImprisonmentCapacity_desc: 刑務所及び監獄の平均的な利用可能性。
+
+  UltimateMonitor.Monitor.EducationAvailability: 教育の利用可能性
+  UltimateMonitor.Monitor.EducationAvailability_desc: すべての教育レベルの平均的な利用可能性。
+
+  UltimateMonitor.Monitor.IncomeEfficiency: 収入の効率性
+  UltimateMonitor.Monitor.IncomeEfficiency_desc: 総収入に対する総支出の割合を示す収入の効率性。
+
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth: 人口増加
+  UltimateMonitor.Monitor.MonthlyPopulationGrowth_desc: 出生、死亡、市内外への移動に基づく月間人口増加。
+
+  UltimateMonitor.Monitor.AveragePollution: 平均的な汚染
+  UltimateMonitor.Monitor.AveragePollution_desc: 市内のすべてのタイプの汚染を含む平均的な総汚染。
+
+  UltimateMonitor.Monitor.Employable: 就業可能人口
+  UltimateMonitor.Monitor.Employable_desc: 就業可能年齢の人々の数。
+
+  UltimateMonitor.Monitor.UnderEmployed: 職に就いているが過剰な資格を持つ人々
+  UltimateMonitor.Monitor.UnderEmployed_desc: 自分の仕事に対して過剰な資格を持つ人々の数。
+
+  UltimateMonitor.Monitor.HomelessHouseholds: ホームレスの世帯
+  UltimateMonitor.Monitor.HomelessHouseholds_desc: 住宅を購入できない世帯の数。
+
+  UltimateMonitor.Monitor.Unemployed: 失業者
+  UltimateMonitor.Monitor.Unemployed_desc: 仕事ができるが職を持っていない人々の数。
+
+  UltimateMonitor.Size.ExtraSmall: 超小
+  UltimateMonitor.Size.Small: 小
+  UltimateMonitor.Size.Medium: 中
+  UltimateMonitor.Size.Large: 大
